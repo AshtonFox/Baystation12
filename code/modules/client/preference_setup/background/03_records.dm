@@ -4,26 +4,35 @@
 	var/sec_record = ""
 	var/gen_record = ""
 	var/memory = ""
+	var/email_addr = ""
+	var/email_pass = ""
 
 /datum/category_item/player_setup_item/background/records
 	name = "Records"
 	sort_order = 3
 
-/datum/category_item/player_setup_item/background/records/load_character(var/savefile/S)
+/datum/category_item/player_setup_item/background/records/load_character(savefile/S)
 	from_file(S["public_record"],pref.public_record)
 	from_file(S["med_record"],pref.med_record)
 	from_file(S["sec_record"],pref.sec_record)
 	from_file(S["gen_record"],pref.gen_record)
 	from_file(S["memory"],pref.memory)
+	from_file(S["email_addr"], pref.email_addr)
+	from_file(S["email_pass"], pref.email_pass)
 
-/datum/category_item/player_setup_item/background/records/save_character(var/savefile/S)
+/datum/category_item/player_setup_item/background/records/save_character(savefile/S)
 	to_file(S["public_record"],pref.public_record)
 	to_file(S["med_record"],pref.med_record)
 	to_file(S["sec_record"],pref.sec_record)
 	to_file(S["gen_record"],pref.gen_record)
 	to_file(S["memory"],pref.memory)
+	to_file(S["email_addr"], pref.email_addr)
+	to_file(S["email_pass"], pref.email_pass)
 
-/datum/category_item/player_setup_item/background/records/content(var/mob/user)
+/datum/category_item/player_setup_item/background/records/proc/allow_email_branch_check(datum/mil_branch/B)
+	return B.allow_custom_email
+
+/datum/category_item/player_setup_item/background/records/content(mob/user)
 	. = list()
 	. += "<br/><b>Записи</b>:<br/>"
 	if(jobban_isbanned(user, "Records"))
@@ -70,6 +79,34 @@
 		var/memes = sanitize(input(user,"Введите вещи которые помнит персонаж.",CHARACTER_PREFERENCE_INPUT_TITLE, html_decode(pref.memory)) as message|null, MAX_PAPER_MESSAGE_LEN, extra = 0)
 		if(!isnull(memes) && CanUseTopic(user))
 			pref.memory = memes
+		return TOPIC_REFRESH
+
+	else if (href_list["set_email_pass"])
+		var/value = input(user, "Enter email password:", "Email Password", pref.email_pass) as text
+		if (isnull(value) || !CanUseTopic(user))
+			return TOPIC_NOACTION
+		if (value != "")
+			var/clean = sanitize(value)
+			var/chars = length(clean)
+			if (chars < 4 || chars > 16)
+				to_chat(user, SPAN_WARNING("Invalid Email Password '[clean]': must be 4..16 safe glyphs."))
+				return TOPIC_NOACTION
+			value = clean
+		pref.email_pass = value
+		return TOPIC_REFRESH
+
+	else if (href_list["set_email_addr"])
+		var/value = input(user, "Enter email username:", "Email Address", pref.email_addr) as text
+		if (isnull(value) || !CanUseTopic(user))
+			return TOPIC_NOACTION
+		if (value != "")
+			var/clean = sanitize_for_email(value)
+			var/chars = length(clean)
+			if (chars < 4 || chars > 24)
+				to_chat(user, SPAN_WARNING("Invalid Email Username '[clean]': must be 4..24 glyphs from /a-z0-9./"))
+				return TOPIC_NOACTION
+			value = clean
+		pref.email_addr = value
 		return TOPIC_REFRESH
 
 	. =  ..()
