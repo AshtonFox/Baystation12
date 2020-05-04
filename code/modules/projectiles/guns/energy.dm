@@ -106,3 +106,8 @@ GLOBAL_LIST_INIT(registered_cyborg_weapons, list())
 			icon_state = "[modifystate][ratio]"
 		else
 			icon_state = "[initial(icon_state)][ratio]"
+	else
+		if(modifystate)
+			icon_state = "[modifystate]0"
+		else
+			icon_state = "[initial(icon_state)]0"
