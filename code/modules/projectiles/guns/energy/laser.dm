@@ -17,27 +17,44 @@
 	cell_type = /obj/item/weapon/cell/device/weapon
 	var/bat_insert_sound = 'sound/weapons/guns/interaction/pistol_magin.ogg'
 	var/bat_remove_sound = 'sound/weapons/guns/interaction/pistol_magout.ogg'
+	var/hatch = FALSE
 
 /obj/item/weapon/gun/energy/laser/proc/unload_battary(mob/user)
-	if (power_supply)
-		user.put_in_hands(power_supply)
-		user.visible_message("[user] removes [power_supply] from [src].", "<span class='notice'>You remove [power_supply] from [src].</span>")
-		playsound(loc, bat_remove_sound, 50, 1)
-		power_supply = null
-		on_update_icon()
-	else
-		to_chat(user, "<span class='warning'>[src] is empty.</span>")
+		if(!hatch)
+			to_chat(user, "<span class='warning'>Open a hatch firts.</span>")
+			return
+		if (power_supply)
+			user.put_in_hands(power_supply)
+			user.visible_message("[user] removes [power_supply] from [src].", "<span class='notice'>You remove [power_supply] from [src].</span>")
+			playsound(loc, bat_remove_sound, 50, 1)
+			power_supply = null
+			on_update_icon()
+		else
+			to_chat(user, "<span class='warning'>[src] is empty.</span>")
 
 /obj/item/weapon/gun/energy/laser/proc/load_battary(var/obj/item/B, mob/user)
 	if(istype(B, /obj/item/weapon/cell/device/weapon))
+		. = TRUE
+		if(!hatch)
+			to_chat(user, "<span class='warning'>Open a hatch firts.</span>")
+			return
 		if(power_supply)
 			to_chat(user, "<span class='warning'>[src] already has a battry loaded.</span>")
+			return
 		if(!user.unEquip(B, src))
 			return
 		power_supply = B
 		user.visible_message("[user] inserts [B] into [src].", "<span class='notice'>You insert [B] into [src].</span>")
 		playsound(loc, bat_insert_sound, 50, 1)
 		on_update_icon()
+
+/obj/item/weapon/gun/energy/laser/proc/togle_hatch(mob/user)
+	if(!hatch)
+		user.visible_message("[user] open hatch on [src].", "<span class='notice'>You open hatch on [src].</span>")
+		hatch = TRUE
+	else
+		user.visible_message("[user] close hatch on [src].", "<span class='notice'>You close hatch on [src].</span>")
+		hatch = FALSE
 
 /obj/item/weapon/gun/energy/laser/attack_hand(mob/user as mob)
 	if(user.get_inactive_hand() == src)
@@ -46,6 +63,8 @@
 		return ..()
 
 /obj/item/weapon/gun/energy/laser/attackby(var/obj/item/B as obj, mob/user as mob)
+	if(istype(B, /obj/item/weapon/screwdriver))
+		togle_hatch(user)
 	if(!load_battary(B, user))
 		return ..()
 
