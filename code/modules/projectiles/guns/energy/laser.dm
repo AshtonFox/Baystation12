@@ -20,17 +20,17 @@
 	var/hatch = FALSE
 
 /obj/item/weapon/gun/energy/laser/proc/unload_battary(mob/user)
-		if(!hatch)
-			to_chat(user, "<span class='warning'>Open a hatch firts.</span>")
-			return
-		if (power_supply)
-			user.put_in_hands(power_supply)
-			user.visible_message("[user] removes [power_supply] from [src].", "<span class='notice'>You remove [power_supply] from [src].</span>")
-			playsound(loc, bat_remove_sound, 50, 1)
-			power_supply = null
-			on_update_icon()
-		else
-			to_chat(user, "<span class='warning'>[src] is empty.</span>")
+	if(!hatch)
+		to_chat(user, "<span class='warning'>Open a hatch firts.</span>")
+		return
+	if (power_supply)
+		user.put_in_hands(power_supply)
+		user.visible_message("[user] removes [power_supply] from [src].", "<span class='notice'>You remove [power_supply] from [src].</span>")
+		playsound(loc, bat_remove_sound, 50, 1)
+		power_supply = null
+		on_update_icon()
+	else
+		to_chat(user, "<span class='warning'>[src] is empty.</span>")
 
 /obj/item/weapon/gun/energy/laser/proc/load_battary(var/obj/item/B, mob/user)
 	if(istype(B, /obj/item/weapon/cell/device/weapon))
