@@ -49,12 +49,13 @@
 		on_update_icon()
 
 /obj/item/weapon/gun/energy/laser/proc/togle_hatch(mob/user)
-	if(!hatch)
-		user.visible_message("[user] open hatch on [src].", "<span class='notice'>You open hatch on [src].</span>")
-		hatch = TRUE
-	else
-		user.visible_message("[user] close hatch on [src].", "<span class='notice'>You close hatch on [src].</span>")
-		hatch = FALSE
+	if(do_after(user, 5 * (SKILL_MAX + 1 - user.get_skill_value(SKILL_WEAPONS)) , src))
+		if(!hatch)
+			user.visible_message("[user] open hatch on [src].", "<span class='notice'>You open hatch on [src].</span>")
+			hatch = TRUE
+		else
+			user.visible_message("[user] close hatch on [src].", "<span class='notice'>You close hatch on [src].</span>")
+			hatch = FALSE
 
 /obj/item/weapon/gun/energy/laser/attack_hand(mob/user as mob)
 	if(user.get_inactive_hand() == src)
@@ -62,10 +63,10 @@
 	else
 		return ..()
 
-/obj/item/weapon/gun/energy/laser/attackby(var/obj/item/B as obj, mob/user as mob)
-	if(istype(B, /obj/item/weapon/screwdriver))
+/obj/item/weapon/gun/energy/laser/attackby(var/obj/item/I as obj, mob/user as mob)
+	if(istype(I, /obj/item/weapon/screwdriver))
 		togle_hatch(user)
-	if(!load_battary(B, user))
+	if(!load_battary(I, user))
 		return ..()
 
 
