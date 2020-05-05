@@ -6,7 +6,7 @@
 /obj/item/weapon/gun/energy/examine(mob/user)
     . = ..(user)
     if (!cell_type)
-        to_chat(user, "This weapon use custom energy cell as a power source.")
+        to_chat(user, "This weapon uses custom energy cell as a power source.")
     else
         switch(cell_type)
             if (/obj/item/weapon/cell/device/weapon/normal)
