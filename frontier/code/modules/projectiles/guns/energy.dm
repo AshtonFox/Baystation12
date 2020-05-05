@@ -55,7 +55,7 @@
     else if (istype(B, /obj/item/weapon/cell))
         to_chat(user, "<span class='warning'>You can't use this cell in [src].</span>")
     else
-        to_chat(user, "<span class='warning'>You can't use this in the [src], stupid.</span>")
+        to_chat(user, "<span class='warning'>You can't use this in [src], stupid.</span>")
 
 /*
 /obj/item/weapon/gun/energy/proc/togle_hatch(mob/user)
