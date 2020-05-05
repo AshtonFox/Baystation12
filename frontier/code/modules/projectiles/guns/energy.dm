@@ -35,7 +35,7 @@
 
 /obj/item/weapon/gun/energy/proc/load_battary(var/obj/item/B, mob/user)
     if(cell_type == null || use_external_power)
-        to_chat(user, "<span class='warning'>You can't insert a battery into the [src].</span>")
+        to_chat(user, "<span class='warning'>You can't insert a battery into [src].</span>")
         return
     if(istype(B, cell_type))
         . = TRUE
