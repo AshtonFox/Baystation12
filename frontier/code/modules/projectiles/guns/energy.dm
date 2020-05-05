@@ -5,59 +5,66 @@
 
 /obj/item/weapon/gun/energy/examine(mob/user)
     . = ..(user)
-    if (cell_type != null)
-        var/obj/item/weapon/cell/C = cell_type
-        to_chat(user, "This gun use [C.name] as a power source.")
+    if (!cell_type)
+        to_chat(user, "This weapon use custom energy cell as a power source.")
+    else
+        switch(cell_type)
+            if (/obj/item/weapon/cell/device/weapon/normal)
+                to_chat(user, "This weapon uses a normal-size energy cell as a power source.")
+            if (/obj/item/weapon/cell/device/weapon/small)
+                to_chat(user, "This weapon uses a small energy cell as a power source.")
+            if (/obj/item/weapon/cell/device/weapon/big)
+                to_chat(user, "This weapon uses a big energy cell as a power source.")
 
 /obj/item/weapon/gun/energy/proc/unload_battary(mob/user)
     if(cell_type == null || use_external_power)
-        to_chat(user, "<span class='warning'>You can't pull out battery from [src].</span>")
+        to_chat(user, "<span class='warning'>You can't pull the battery out of the [src].</span>")
         return
     if(!hatch)
-        to_chat(user, "<span class='warning'>Open a hatch firts.</span>")
+        to_chat(user, "<span class='warning'>Open the hatch first.</span>")
         return
     if (power_supply)
         if(do_after(user, 10 * (SKILL_MAX + 1 - user.get_skill_value(SKILL_WEAPONS)) , src))
             user.put_in_hands(power_supply)
-            user.visible_message("[user] removes [power_supply] from [src].", "<span class='notice'>You remove [power_supply] from [src].</span>")
+            user.visible_message("[user] removes a [power_supply] from the [src].", "<span class='notice'>You remove a [power_supply] from the [src].</span>")
             playsound(loc, bat_remove_sound, 50, 1)
             power_supply = null
             on_update_icon()
     else
-        to_chat(user, "<span class='warning'>[src] is empty.</span>")
+        to_chat(user, "<span class='warning'>The [src] is empty.</span>")
 
 /obj/item/weapon/gun/energy/proc/load_battary(var/obj/item/B, mob/user)
     if(cell_type == null || use_external_power)
-        to_chat(user, "<span class='warning'>You can't insert out battery in [src].</span>")
+        to_chat(user, "<span class='warning'>You can't insert a battery into the [src].</span>")
         return
     if(istype(B, cell_type))
         . = TRUE
         if(!hatch)
-            to_chat(user, "<span class='warning'>Open a hatch firts.</span>")
+            to_chat(user, "<span class='warning'>Open the hatch first.</span>")
             return
         if(power_supply)
-            to_chat(user, "<span class='warning'>[src] already has a battry loaded.</span>")
+            to_chat(user, "<span class='warning'>The [src] already has a battery loaded.</span>")
             return
         if(do_after(user, 10 * (SKILL_MAX + 1 - user.get_skill_value(SKILL_WEAPONS)) , src))
             if(!user.unEquip(B, src))
                 return
             power_supply = B
-            user.visible_message("[user] inserts [B] into [src].", "<span class='notice'>You insert [B] into [src].</span>")
+            user.visible_message("[user] inserts a [B] into the [src].", "<span class='notice'>You insert a [B] into the [src].</span>")
             playsound(loc, bat_insert_sound, 50, 1)
             on_update_icon()
     else if (istype(B, /obj/item/weapon/cell))
-        to_chat(user, "<span class='warning'>You can't use this cell in [src].</span>")
+        to_chat(user, "<span class='warning'>You can't use this cell in the [src].</span>")
     else
-        to_chat(user, "<span class='warning'>You can't use this in [src]. Stupid man.</span>")
+        to_chat(user, "<span class='warning'>You can't use this in the [src], stupid.</span>")
 
 
 /obj/item/weapon/gun/energy/proc/togle_hatch(mob/user)
     if(do_after(user, 5, src))
         if(!hatch)
-            user.visible_message("[user] open hatch on [src].", "<span class='notice'>You open hatch on [src].</span>")
+            user.visible_message("[user] opens the hatch on the [src].", "<span class='notice'>You open the hatch on the [src].</span>")
             hatch = TRUE
         else
-            user.visible_message("[user] close hatch on [src].", "<span class='notice'>You close hatch on [src].</span>")
+            user.visible_message("[user] closes the hatch on the [src].", "<span class='notice'>You close the hatch on the [src].</span>")
             hatch = FALSE
 
 /obj/item/weapon/gun/energy/attack_hand(mob/user as mob)
