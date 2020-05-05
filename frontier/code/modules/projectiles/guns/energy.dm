@@ -57,7 +57,7 @@
     else
         to_chat(user, "<span class='warning'>You can't use this in the [src], stupid.</span>")
 
-
+/*
 /obj/item/weapon/gun/energy/proc/togle_hatch(mob/user)
     playsound(src.loc, 'sound/items/Screwdriver.ogg', 100, 1)
     if(do_after(user, 5, src))
@@ -67,7 +67,7 @@
         else
             user.visible_message("[user] closes the hatch on the [src].", "<span class='notice'>You close the hatch on the [src].</span>")
             hatch = FALSE
-
+*/
 /obj/item/weapon/gun/energy/attack_hand(mob/user as mob)
     if(user.get_inactive_hand() == src)
         unload_battary(user)
@@ -75,7 +75,10 @@
         return ..()
 
 /obj/item/weapon/gun/energy/attackby(var/obj/item/I as obj, mob/user as mob)
+/*
     if(istype(I, /obj/item/weapon/screwdriver))
         togle_hatch(user)
+        return ..()
+*/
     if(!load_battary(I, user))
         return ..()
