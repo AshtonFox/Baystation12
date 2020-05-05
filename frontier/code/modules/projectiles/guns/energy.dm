@@ -43,7 +43,7 @@
             to_chat(user, "<span class='warning'>Open the hatch first.</span>")
             return
         if(power_supply)
-            to_chat(user, "<span class='warning'>The [src] already has a battery loaded.</span>")
+            to_chat(user, "<span class='warning'>[src] already has a battery loaded.</span>")
             return
         if(do_after(user, 7 * (SKILL_MAX + 1 - user.get_skill_value(SKILL_WEAPONS)) , src))
             if(!user.unEquip(B, src))
