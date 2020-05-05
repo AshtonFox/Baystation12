@@ -59,6 +59,7 @@
 
 
 /obj/item/weapon/gun/energy/proc/togle_hatch(mob/user)
+    playsound(src.loc, 'sound/items/Screwdriver.ogg', 100, 1)
     if(do_after(user, 5, src))
         if(!hatch)
             user.visible_message("[user] opens the hatch on the [src].", "<span class='notice'>You open the hatch on the [src].</span>")
