@@ -49,7 +49,7 @@
             if(!user.unEquip(B, src))
                 return
             power_supply = B
-            user.visible_message("[user] inserts a [B] into the [src].", "<span class='notice'>You insert a [B] into the [src].</span>")
+            user.visible_message("[user] inserts [B] into [src].", "<span class='notice'>You insert [B] into [src].</span>")
             playsound(loc, bat_insert_sound, 50, 1)
             on_update_icon()
     else if (istype(B, /obj/item/weapon/cell))
