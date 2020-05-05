@@ -1,7 +1,7 @@
 /obj/item/weapon/gun/energy
     var/bat_insert_sound = 'sound/weapons/guns/interaction/pistol_magin.ogg'
     var/bat_remove_sound = 'sound/weapons/guns/interaction/pistol_magout.ogg'
-    var/hatch = FALSE
+    var/hatch = TRUE
 
 /obj/item/weapon/gun/energy/examine(mob/user)
     . = ..(user)
@@ -24,7 +24,7 @@
         to_chat(user, "<span class='warning'>Open the hatch first.</span>")
         return
     if (power_supply)
-        if(do_after(user, 10 * (SKILL_MAX + 1 - user.get_skill_value(SKILL_WEAPONS)) , src))
+        if(do_after(user, 7 * (SKILL_MAX + 1 - user.get_skill_value(SKILL_WEAPONS)) , src))
             user.put_in_hands(power_supply)
             user.visible_message("[user] removes a [power_supply] from the [src].", "<span class='notice'>You remove a [power_supply] from the [src].</span>")
             playsound(loc, bat_remove_sound, 50, 1)
@@ -45,7 +45,7 @@
         if(power_supply)
             to_chat(user, "<span class='warning'>The [src] already has a battery loaded.</span>")
             return
-        if(do_after(user, 10 * (SKILL_MAX + 1 - user.get_skill_value(SKILL_WEAPONS)) , src))
+        if(do_after(user, 7 * (SKILL_MAX + 1 - user.get_skill_value(SKILL_WEAPONS)) , src))
             if(!user.unEquip(B, src))
                 return
             power_supply = B
