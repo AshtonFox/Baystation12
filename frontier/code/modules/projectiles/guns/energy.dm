@@ -53,7 +53,7 @@
             playsound(loc, bat_insert_sound, 50, 1)
             on_update_icon()
     else if (istype(B, /obj/item/weapon/cell))
-        to_chat(user, "<span class='warning'>You can't use this cell in the [src].</span>")
+        to_chat(user, "<span class='warning'>You can't use this cell in [src].</span>")
     else
         to_chat(user, "<span class='warning'>You can't use this in the [src], stupid.</span>")
 
