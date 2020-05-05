@@ -26,7 +26,7 @@
     if (power_supply)
         if(do_after(user, 7 * (SKILL_MAX + 1 - user.get_skill_value(SKILL_WEAPONS)) , src))
             user.put_in_hands(power_supply)
-            user.visible_message("[user] removes a [power_supply] from the [src].", "<span class='notice'>You remove a [power_supply] from the [src].</span>")
+            user.visible_message("[user] removes [power_supply] from [src].", "<span class='notice'>You remove [power_supply] from [src].</span>")
             playsound(loc, bat_remove_sound, 50, 1)
             power_supply = null
             on_update_icon()
