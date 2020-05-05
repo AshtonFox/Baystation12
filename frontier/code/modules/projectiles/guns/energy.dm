@@ -18,7 +18,7 @@
 
 /obj/item/weapon/gun/energy/proc/unload_battary(mob/user)
     if(cell_type == null || use_external_power)
-        to_chat(user, "<span class='warning'>You can't pull the battery out of the [src].</span>")
+        to_chat(user, "<span class='warning'>You can't pull the battery out of [src].</span>")
         return
     if(!hatch)
         to_chat(user, "<span class='warning'>Open the hatch first.</span>")
