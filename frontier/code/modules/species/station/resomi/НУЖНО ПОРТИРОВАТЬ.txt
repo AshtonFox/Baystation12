@@ -1,0 +1,89 @@
+infinity\code\game\objects\items\weapons\storage\backpack.dm:29:		SPECIES_RESOMI = 'infinity/icons/mob/species/resomi/onmob_back_resomi.dmi',
+infinity\code\game\objects\items\weapons\storage\backpack.dm:48:		SPECIES_RESOMI = 'infinity/icons/mob/species/resomi/onmob_back_resomi.dmi'
+infinity\code\game\objects\items\weapons\storage\backpack.dm:75:	sprite_sheets = list(SPECIES_RESOMI = CUSTOM_ITEM_MOB)
+infinity\code\modules\client\preference_setup\loadout\lists\resomi.dm:5:	whitelisted = list(SPECIES_RESOMI)
+infinity\code\modules\client\preference_setup\loadout\lists\resomi.dm:64:	whitelisted = list(SPECIES_RESOMI)
+infinity\code\modules\client\preference_setup\loadout\lists\resomi.dm:79:	whitelisted = list(SPECIES_RESOMI)
+infinity\code\modules\client\preference_setup\loadout\lists\resomi.dm:85:	whitelisted = list(SPECIES_RESOMI)
+infinity\code\modules\client\preference_setup\loadout\lists\resomi.dm:98:	whitelisted = list(SPECIES_RESOMI)
+infinity\code\modules\client\preference_setup\loadout\lists\resomi.dm:110:	whitelisted = list(SPECIES_RESOMI)
+infinity\code\modules\client\preference_setup\loadout\lists\resomi_cloaks.dm:5:	whitelisted = list(SPECIES_RESOMI)
+infinity\code\modules\client\preference_setup\loadout\lists\xenowear.dm:12:	whitelisted = list(SPECIES_TAJARA, SPECIES_RESOMI)
+infinity\code\modules\clothing\accessories\accessories_resomi.dm:7:	species_restricted = list(SPECIES_RESOMI)
+infinity\code\modules\clothing\accessories\collar.dm:15:		SPECIES_RESOMI = 'infinity/icons/mob/species/resomi/misc.dmi'
+infinity\code\modules\clothing\glasses\glasses_resomi.dm:8:	species_restricted = list(SPECIES_RESOMI)
+infinity\code\modules\clothing\glasses\glasses_resomi.dm:19:	species_restricted = list(SPECIES_RESOMI)
+infinity\code\modules\clothing\glasses\glasses_resomi.dm:30:	species_restricted = list(SPECIES_RESOMI)
+infinity\code\modules\clothing\head\head.dm:52:		SPECIES_RESOMI = 'infinity/icons/mob/species/resomi/onmob_head_resomi.dmi',
+infinity\code\modules\clothing\masks\masks.dm:14:		SPECIES_RESOMI = 'infinity/icons/mob/species/resomi/onmob_mask_resomi.dmi',
+infinity\code\modules\clothing\masks\masks_xeno.dm:8:	species_restricted = list(SPECIES_RESOMI)
+infinity\code\modules\clothing\masks\masks_xeno.dm:9:	sprite_sheets = list(SPECIES_RESOMI = CUSTOM_ITEM_MOB)
+infinity\code\modules\clothing\shoes\shoes_resomi.dm:9:	species_restricted = list(SPECIES_RESOMI)
+infinity\code\modules\clothing\shoes\shoes_resomi.dm:25:	species_restricted = list(SPECIES_RESOMI)
+infinity\code\modules\clothing\suits\suits_resomi.dm:14:	 species_restricted = list(SPECIES_RESOMI)
+infinity\code\modules\clothing\suits\suits_resomi.dm:29:	species_restricted = list(SPECIES_RESOMI)
+infinity\code\modules\clothing\suits\suits_resomi.dm:41:	species_restricted = list(SPECIES_RESOMI)
+infinity\code\modules\clothing\suits\suits_resomi.dm:284:	species_restricted = list(SPECIES_RESOMI)
+infinity\code\modules\clothing\suits\suits_resomi.dm:290:		SPECIES_RESOMI = 'infinity/icons/mob/species/resomi/onmob_suit_resomi.dmi'
+infinity\code\modules\clothing\suits\suits_resomi.dm:327:	species_restricted = list(SPECIES_RESOMI)
+infinity\code\modules\clothing\suits\suits_resomi.dm:335:		SPECIES_RESOMI = 'infinity/icons/mob/species/resomi/onmob_head_resomi.dmi'
+infinity\code\modules\clothing\suits\suits_xeno.dm:10:	species_restricted = list(SPECIES_RESOMI)
+infinity\code\modules\clothing\suits\suits_xeno.dm:11:	sprite_sheets = list(SPECIES_RESOMI = CUSTOM_ITEM_MOB)
+infinity\code\modules\clothing\under\thermal.dm:116:	species_restricted = list(SPECIES_RESOMI)
+infinity\code\modules\clothing\under\thermal.dm:118:		SPECIES_RESOMI = 'infinity/icons/mob/onmob/onmob_under.dmi',
+infinity\code\modules\clothing\under\under_resomi.dm:7:	species_restricted = list(SPECIES_RESOMI)
+infinity\code\modules\emotes\definitions\audible.dm:15:	SPECIES_UNATHI, SPECIES_YEOSA, SPECIES_EROSAN, SPECIES_TAJARA, SPECIES_RESOMI, SPECIES_VOX, SPECIES_SKRELL)
+infinity\code\modules\emotes\definitions\audible.dm:21:	SPECIES_UNATHI, SPECIES_YEOSA, SPECIES_EROSAN, SPECIES_TAJARA, SPECIES_RESOMI, SPECIES_VOX, SPECIES_IPC,
+infinity\code\modules\emotes\definitions\audible.dm:38:	SPECIES_UNATHI, SPECIES_YEOSA, SPECIES_EROSAN, SPECIES_TAJARA, SPECIES_RESOMI, SPECIES_VOX, SPECIES_SKRELL)
+infinity\code\modules\emotes\definitions\audible.dm:60:	SPECIES_UNATHI, SPECIES_YEOSA, SPECIES_EROSAN, SPECIES_TAJARA, SPECIES_RESOMI, SPECIES_VOX, SPECIES_SKRELL)
+infinity\code\modules\emotes\definitions\audible.dm:79:	SPECIES_UNATHI, SPECIES_YEOSA, SPECIES_EROSAN, SPECIES_TAJARA, SPECIES_RESOMI, SPECIES_VOX, SPECIES_SKRELL)
+infinity\code\modules\mob\language\alien\resomi.dm:3:	native_speaker = list(SPECIES_RESOMI, SPECIES_IPC)
+infinity\code\modules\mob\living\eye_blink.dm:40:		if(SPECIES_UNATHI, SPECIES_YEOSA, SPECIES_TAJARA, SPECIES_RESOMI, SPECIES_SKRELL, SPECIES_EROSAN)
+infinity\code\modules\mob\living\carbon\human\interactions.dm:53:			if ((P.species.name == SPECIES_TAJARA)  || (P.species.name == SPECIES_VOX)|| (P.species.name == SPECIES_RESOMI) || (P.species.name == SPECIES_YEOSA) || (P.species.name == SPECIES_EROSAN) || (P.species.name == SPECIES_UNATHI))
+infinity\code\modules\organs\robolimbs.dm:29:	restricted_to = list(SPECIES_RESOMI)
+infinity\code\modules\organs\robolimbs.dm:30:	allowed_bodytypes = list(SPECIES_RESOMI)
+infinity\code\modules\reagents\reagent_containers\food\drinks.dm:60:		SPECIES_RESOMI = 'infinity/icons/mob/human_races/species/resomi/ears.dmi',
+infinity\code\modules\species\station\resomi.dm:2:	name = SPECIES_RESOMI
+infinity\code\modules\sprite_accessories\accessory_resomi.dm:5:	species_allowed = list(SPECIES_RESOMI)
+infinity\code\modules\sprite_accessories\accessory_resomi.dm:75:	species_allowed = list(SPECIES_RESOMI)
+infinity\customs\kirill.dm:25:		SPECIES_RESOMI = 'infinity/icons/mob/species/resomi/onmob_suit_resomi.dmi'
+maps\colony\items\clothing\solgov-head.dm:27:		SPECIES_RESOMI = 'infinity/icons/mob/species/resomi/onmob_head_resomi.dmi',
+maps\colony\items\clothing\solgov-head.dm:88:		SPECIES_RESOMI = 'infinity/icons/mob/species/resomi/onmob_head_resomi.dmi',
+maps\colony\items\clothing\solgov-head.dm:223:		SPECIES_RESOMI = 'infinity/icons/mob/species/resomi/onmob_head_resomi.dmi',
+maps\colony\items\clothing\solgov-head.dm:379:		SPECIES_RESOMI = 'infinity/icons/mob/species/resomi/onmob_head_resomi.dmi',
+maps\torch\torch_inf.dm:95:			for(var/species_name in list(SPECIES_IPC, SPECIES_SKRELL, SPECIES_UNATHI, SPECIES_RESOMI, SPECIES_TAJARA))
+maps\torch\items\machinery.dm:51:	species = list(SPECIES_HUMAN,SPECIES_SKRELL,SPECIES_UNATHI, SPECIES_RESOMI, SPECIES_TAJARA)
+maps\torch\items\clothing\solgov-accessory.dm:566:		SPECIES_RESOMI = 'infinity/icons/mob/species/resomi/onmob_accessories_resomi.dmi'
+maps\torch\items\clothing\solgov-head.dm:7:		SPECIES_RESOMI = 'infinity/icons/mob/species/resomi/onmob_head_resomi.dmi'
+maps\torch\items\clothing\solgov-head.dm:29:		SPECIES_RESOMI = 'infinity/icons/mob/species/resomi/onmob_head_resomi.dmi',
+maps\torch\items\clothing\solgov-head.dm:89:		SPECIES_RESOMI = 'infinity/icons/mob/species/resomi/onmob_head_resomi.dmi',
+maps\torch\items\clothing\solgov-head.dm:234:		SPECIES_RESOMI = 'infinity/icons/mob/species/resomi/onmob_head_resomi.dmi',
+maps\torch\items\clothing\solgov-head.dm:400:		SPECIES_RESOMI = 'infinity/icons/mob/species/resomi/onmob_head_resomi.dmi',
+maps\torch\items\clothing\solgov-head.dm:438:		SPECIES_RESOMI = 'infinity/icons/mob/species/resomi/onmob_head_resomi.dmi'
+maps\torch\items\clothing\solgov-head.dm:444:		SPECIES_RESOMI = 'infinity/icons/obj/clothing/species/resomi/obj_head_resomi.dmi'
+maps\torch\items\clothing\solgov-head.dm:454:		SPECIES_RESOMI = 'infinity/icons/mob/species/resomi/onmob_head_resomi.dmi'
+maps\torch\items\clothing\solgov-head.dm:460:		SPECIES_RESOMI = 'infinity/icons/obj/clothing/species/resomi/obj_head_resomi.dmi'
+maps\torch\items\clothing\solgov-head.dm:470:		SPECIES_RESOMI = 'infinity/icons/mob/species/resomi/onmob_head_resomi.dmi'
+maps\torch\items\clothing\solgov-head.dm:476:		SPECIES_RESOMI = 'infinity/icons/obj/clothing/species/resomi/obj_head_resomi.dmi'
+maps\torch\items\clothing\solgov-head.dm:486:		SPECIES_RESOMI = 'infinity/icons/mob/species/resomi/onmob_head_resomi.dmi'
+maps\torch\items\clothing\solgov-head.dm:492:		SPECIES_RESOMI = 'infinity/icons/obj/clothing/species/resomi/obj_head_resomi.dmi'
+maps\torch\items\clothing\solgov-infinity.dm:36:	species_restricted = list(SPECIES_RESOMI)
+maps\torch\items\clothing\solgov-infinity.dm:37:	sprite_sheets = list(SPECIES_RESOMI = 'infinity/icons/mob/species/resomi/onmob_under_resomi.dmi')
+maps\torch\items\clothing\solgov-infinity.dm:46:	species_restricted = list(SPECIES_RESOMI)
+maps\torch\items\clothing\solgov-infinity.dm:47:	sprite_sheets = list(SPECIES_RESOMI = 'infinity/icons/mob/species/resomi/onmob_under_resomi.dmi')
+maps\torch\items\clothing\solgov-infinity.dm:56:	species_restricted = list(SPECIES_RESOMI)
+maps\torch\items\clothing\solgov-infinity.dm:57:	sprite_sheets = list(SPECIES_RESOMI = 'infinity/icons/mob/species/resomi/onmob_under_resomi.dmi')
+maps\torch\items\clothing\solgov-infinity.dm:67:	species_restricted = list(SPECIES_RESOMI)
+maps\torch\items\clothing\solgov-infinity.dm:68:	sprite_sheets = list(SPECIES_RESOMI = 'infinity/icons/mob/species/resomi/onmob_under_resomi.dmi')
+maps\torch\items\clothing\solgov-suit.dm:321:		SPECIES_RESOMI = 'infinity/icons/mob/species/resomi/onmob_suit_resomi.dmi'
+maps\torch\items\clothing\solgov-suit.dm:327:		SPECIES_RESOMI = 'infinity/icons/obj/clothing/species/resomi/obj_suit_resomi.dmi'
+maps\torch\items\clothing\solgov-suit.dm:341:		SPECIES_RESOMI = 'infinity/icons/mob/species/resomi/onmob_suit_resomi.dmi'
+maps\torch\items\clothing\solgov-suit.dm:347:		SPECIES_RESOMI = 'infinity/icons/obj/clothing/species/resomi/obj_suit_resomi.dmi'
+maps\torch\items\clothing\solgov-suit.dm:361:		SPECIES_RESOMI = 'infinity/icons/mob/species/resomi/onmob_suit_resomi.dmi'
+maps\torch\items\clothing\solgov-suit.dm:367:		SPECIES_RESOMI = 'infinity/icons/obj/clothing/species/resomi/obj_suit_resomi.dmi'
+maps\torch\items\clothing\solgov-suit.dm:381:		SPECIES_RESOMI = 'infinity/icons/mob/species/resomi/onmob_suit_resomi.dmi'
+maps\torch\items\clothing\solgov-suit.dm:387:		SPECIES_RESOMI = 'infinity/icons/obj/clothing/species/resomi/obj_suit_resomi.dmi'
+maps\torch\items\clothing\solgov-suit.dm:429:		SPECIES_RESOMI = 'infinity/icons/mob/species/resomi/onmob_head_resomi.dmi'//INF
+maps\torch\items\clothing\solgov-suit.dm:433:		SPECIES_RESOMI = 'infinity/icons/obj/clothing/species/resomi/obj_head_resomi.dmi'
+maps\torch\items\clothing\solgov-suit.dm:457:		SPECIES_RESOMI = 'infinity/icons/mob/species/resomi/onmob_suit_resomi.dmi'//INF
+maps\torch\items\clothing\solgov-suit.dm:461:		SPECIES_RESOMI = 'infinity/icons/obj/clothing/species/resomi/obj_suit_resomi.dmi'//INF

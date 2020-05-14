@@ -53,7 +53,7 @@
 
 /mob/living/carbon/human/tajaran/New(var/new_loc)
 	h_style = "Tajaran Ears"
-	..(new_loc, SPECIES_TAJ)
+	..(new_loc, SPECIES_TAJARA)
 
 /mob/living/carbon/human/vox/New(var/new_loc)
 	h_style = "Long Vox Quills"

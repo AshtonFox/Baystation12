@@ -13,7 +13,7 @@
 	sprite_sheets = list(
 		SPECIES_AKULA = 'icons/mob/species/akula/onmob_head_helmet_akula.dmi',
 		SPECIES_VULP = 'icons/mob/species/vulpkanin/onmob_head_helmet_vulpkanin.dmi',
-		SPECIES_TAJ = 'icons/mob/species/tajaran/onmob_head_helmet_tajaran.dmi',
+		SPECIES_TAJARA = 'icons/mob/species/tajaran/onmob_head_helmet_tajaran.dmi',
 		SPECIES_OLDUNATHI = 'icons/mob/species/unathi/onmob_head_helmet_unathi.dmi',
 		SPECIES_SERGAL = 'icons/mob/species/sergal/onmob_head_helmet_sergal.dmi',
 		SPECIES_NORTHERN = 'icons/mob/species/sergal/onmob_head_helmet_sergal.dmi',
@@ -59,7 +59,7 @@
 	sprite_sheets = list(
 		SPECIES_AKULA = 'icons/mob/species/akula/onmob_suit_akula.dmi',
 		SPECIES_VULP = 'icons/mob/species/vulpkanin/onmob_suit_vulpkanin.dmi',
-		SPECIES_TAJ = 'icons/mob/species/tajaran/onmob_suit_tajaran.dmi',
+		SPECIES_TAJARA = 'icons/mob/species/tajaran/onmob_suit_tajaran.dmi',
 		SPECIES_OLDUNATHI = 'icons/mob/species/unathi/onmob_suit_unathi.dmi',
 		SPECIES_SERGAL = 'icons/mob/species/sergal/onmob_suit_sergal.dmi',
 		SPECIES_NORTHERN = 'icons/mob/species/sergal/onmob_suit_sergal.dmi',

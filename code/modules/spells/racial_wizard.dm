@@ -12,7 +12,7 @@
 	var/list/potentials = list(
 		SPECIES_HUMAN = /obj/item/weapon/storage/bag/cash/infinite,
 		SPECIES_VOX = /spell/targeted/shapeshift/true_form,
-		SPECIES_TAJ = /spell/mephir_shroud,
+		SPECIES_TAJARA = /spell/mephir_shroud,
 		SPECIES_UNATHI = /spell/moghes_blessing,
 		SPECIES_RESOMI = /spell/aoe_turf/conjure/summon/resomi,
 		SPECIES_DIONA = /spell/aoe_turf/conjure/grove/gestalt,
