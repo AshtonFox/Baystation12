@@ -2,8 +2,8 @@
  * Science
  */
 /obj/item/clothing/under/rank/research_director
-	desc = "It's a jumpsuit worn by those with the know-how to achieve the position of \"Chief Science Officer\". Its fabric provides minor protection from biological contaminants."
-	name = "chief science officer's jumpsuit"
+	desc = "It's a jumpsuit worn by those with the know-how to achieve the position of \"Research Director\". Its fabric provides minor protection from biological contaminants."
+	name = "research director's jumpsuit"
 	icon_state = "director"
 	item_state = "lb_suit"
 	worn_state = "director"
@@ -22,8 +22,8 @@
 		)
 
 /obj/item/clothing/under/rank/research_director/dress_rd
-	name = "chief science officer dress uniform"
-	desc = "Feminine fashion for the style concious CSO. Its fabric provides minor protection from biological contaminants."
+	name = "research director's dress uniform"
+	desc = "Feminine fashion for the style concious RD. Its fabric provides minor protection from biological contaminants."
 	icon_state = "dress_rd"
 	item_state = "lb_suit"
 	worn_state = "dress_rd"

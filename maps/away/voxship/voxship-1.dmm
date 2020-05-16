@@ -599,10 +599,6 @@
 /obj/effect/catwalk_plated/dark,
 /turf/simulated/floor/reinforced/vox,
 /area/voxship/ship)
-"bK" = (
-/obj/structure/inflatable/door,
-/turf/simulated/floor/tiled/techmaint/vox,
-/area/voxship/base)
 "bL" = (
 /obj/effect/floor_decal/sign/b,
 /turf/simulated/floor/tiled/techmaint/vox,
@@ -1463,6 +1459,11 @@
 	d2 = 8;
 	icon_state = "1-8"
 	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
 /turf/simulated/floor/tiled/techmaint/vox,
 /area/voxship/base)
 "dY" = (
@@ -1477,6 +1478,12 @@
 /obj/random/masks,
 /obj/random/masks,
 /obj/random/masks,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8";
+	pixel_x = 0
+	},
 /turf/simulated/floor/tiled/techmaint/vox,
 /area/voxship/base)
 "dZ" = (
@@ -1489,6 +1496,12 @@
 /obj/random/masks,
 /obj/random/masks,
 /obj/random/masks,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8";
+	pixel_x = 0
+	},
 /turf/simulated/floor/tiled/techmaint/vox,
 /area/voxship/base)
 "ea" = (
@@ -1722,9 +1735,6 @@
 	dir = 8
 	},
 /obj/effect/floor_decal/borderfloor/full,
-/obj/machinery/light{
-	dir = 4
-	},
 /turf/simulated/floor/plating/vox,
 /area/voxship/ship)
 "eK" = (
@@ -1882,13 +1892,6 @@
 /obj/machinery/atmospherics/binary/passive_gate/on{
 	dir = 8
 	},
-/turf/simulated/floor/plating/vox,
-/area/voxship/ship)
-"fi" = (
-/obj/machinery/atmospherics/unary/tank/nitrogen{
-	dir = 8
-	},
-/obj/effect/floor_decal/borderfloor/full,
 /turf/simulated/floor/plating/vox,
 /area/voxship/ship)
 "fj" = (
@@ -2134,11 +2137,18 @@
 	icon_state = "dmg2"
 	},
 /area/voxship/base)
-"lC" = (
-/obj/effect/floor_decal/borderfloor/full,
-/obj/structure/inflatable/door,
+"kw" = (
+/obj/effect/floor_decal/borderfloor/cee,
+/obj/structure/closet/cabinet,
+/obj/item/stack/material/tritium/ten,
+/obj/item/stack/material/tritium/ten,
+/obj/item/stack/material/tritium/ten,
 /turf/simulated/floor/plating/vox,
 /area/voxship/ship)
+"of" = (
+/obj/item/device/suit_cooling_unit,
+/turf/simulated/floor/tiled/techmaint/vox,
+/area/voxship/base)
 "va" = (
 /obj/machinery/atmospherics/pipe/simple/visible/black,
 /obj/structure/cable/yellow{
@@ -2162,35 +2172,71 @@
 /obj/machinery/portable_atmospherics/canister/oxygen,
 /turf/simulated/floor/plating/vox,
 /area/voxship/ship)
+"ys" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/catwalk,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8";
+	pixel_x = 0
+	},
+/turf/simulated/floor/plating/vox,
+/area/voxship/base)
 "Cj" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/black,
 /obj/machinery/portable_atmospherics/canister/oxygen,
 /turf/simulated/floor/plating/vox,
 /area/voxship/ship)
-"ET" = (
+"Cy" = (
+/obj/machinery/atmospherics/unary/tank/nitrogen{
+	dir = 8
+	},
+/obj/effect/floor_decal/borderfloor/full,
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/plating/vox,
+/area/voxship/ship)
+"DG" = (
+/obj/machinery/recharge_station,
 /turf/simulated/floor/tiled/techmaint/vox,
-/area/space)
+/area/voxship/base)
 "Fm" = (
 /obj/structure/inflatable/door,
 /turf/simulated/floor/tiled/techmaint/vox,
 /area/space)
-"Nd" = (
-/obj/effect/floor_decal/borderfloor/cee,
-/obj/structure/closet/cabinet,
-/obj/item/stack/material/tritium/ten,
-/obj/item/stack/material/tritium/ten,
-/obj/item/stack/material/tritium/ten,
+"Kv" = (
+/obj/effect/floor_decal/borderfloor/full,
+/obj/structure/inflatable/door,
 /turf/simulated/floor/plating/vox,
 /area/voxship/ship)
-"VY" = (
+"Lt" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8";
+	pixel_x = 0
+	},
+/obj/item/device/suit_cooling_unit,
+/turf/simulated/floor/tiled/techmaint/vox,
+/area/voxship/base)
+"RP" = (
+/obj/structure/inflatable/door,
+/turf/simulated/floor/tiled/techmaint/vox,
+/area/voxship/base)
+"Tf" = (
+/turf/simulated/floor/tiled/techmaint/vox,
+/area/space)
+"Wm" = (
+/obj/machinery/atmospherics/pipe/manifold/visible/black,
+/turf/simulated/floor/plating/vox,
+/area/voxship/ship)
+"Xv" = (
 /obj/machinery/atmospherics/pipe/simple/visible/black{
 	dir = 4
 	},
 /obj/machinery/light,
-/turf/simulated/floor/plating/vox,
-/area/voxship/ship)
-"Wm" = (
-/obj/machinery/atmospherics/pipe/manifold/visible/black,
 /turf/simulated/floor/plating/vox,
 /area/voxship/ship)
 "Zl" = (
@@ -5693,13 +5739,13 @@ aa
 aa
 aC
 Wm
-VY
+Xv
 bO
 dH
 bO
 dH
 dH
-Nd
+kw
 aZ
 el
 eL
@@ -6003,14 +6049,14 @@ bg
 bH
 bv
 bX
-lC
+Kv
 cE
 dx
 dQ
 eI
 bH
-lC
-fi
+Kv
+eJ
 aD
 aD
 aa
@@ -6109,7 +6155,7 @@ cn
 cF
 dy
 dV
-eJ
+Cy
 eM
 fd
 aD
@@ -6722,7 +6768,7 @@ eb
 cz
 ez
 fg
-aV
+of
 aV
 aQ
 fj
@@ -6921,7 +6967,7 @@ by
 aV
 aV
 aQ
-dT
+Lt
 aV
 eh
 eE
@@ -7431,7 +7477,7 @@ bL
 dl
 bG
 bT
-bT
+ys
 bG
 cc
 et
@@ -7532,7 +7578,7 @@ aV
 dl
 bS
 aV
-aV
+dT
 bV
 cd
 et
@@ -7838,7 +7884,7 @@ bP
 bP
 bP
 aQ
-aV
+DG
 aV
 bU
 bG
@@ -8343,7 +8389,7 @@ aa
 aa
 ad
 ad
-bK
+RP
 ad
 ad
 ad
@@ -8445,7 +8491,7 @@ aa
 aa
 aa
 ab
-ET
+Tf
 ab
 aa
 aa

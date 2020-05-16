@@ -20,7 +20,7 @@
 	icon_state = "stamp-ce"
 
 /obj/item/weapon/stamp/rd
-	name = "chief science officer's rubber stamp"
+	name = "research director's rubber stamp"
 	icon_state = "stamp-rd"
 
 /obj/item/weapon/stamp/cmo

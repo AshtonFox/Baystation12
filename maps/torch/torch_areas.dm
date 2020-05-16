@@ -597,7 +597,7 @@
 	sound_env = MEDIUM_SOFTFLOOR
 
 /area/command/captainmess
-	name = "Officer's Mess"
+	name = "Mess Hall Downstairs"
 	icon_state = "bar"
 	sound_env = MEDIUM_SOFTFLOOR
 
@@ -637,24 +637,24 @@
 
 /area/crew_quarters/heads/cobed
 	icon_state = "heads_cap"
-	name = "\improper Command - CO's Quarters"
+	name = "\improper Command - Captain's Quarters"
 	sound_env = MEDIUM_SOFTFLOOR
 	req_access = list(access_captain)
 
 /area/crew_quarters/heads/office/co
 	icon_state = "heads_cap"
-	name = "\improper Command - CO's Office"
+	name = "\improper Command - Captain's Office"
 	sound_env = MEDIUM_SOFTFLOOR
 	req_access = list(access_captain)
 
 /area/crew_quarters/heads/office/xo
 	icon_state = "heads_hop"
-	name = "\improper Command - XO's Office"
+	name = "\improper Command - HoP's Office"
 	req_access = list(access_hop)
 
 /area/crew_quarters/heads/office/rd
 	icon_state = "heads_rd"
-	name = "\improper Command - CSO's Office"
+	name = "\improper Command - RD's Office"
 	req_access = list(access_rd)
 
 /area/crew_quarters/heads/office/cmo
@@ -669,17 +669,17 @@
 
 /area/crew_quarters/heads/office/cos
 	icon_state = "heads_hos"
-	name = "\improper Command - CoS' Office"
+	name = "\improper Command - HoS' Office"
 	req_access = list(access_hos)
 
 /area/crew_quarters/heads/office/cl
 	icon_state = "heads_cl"
-	name = "\improper Command - CL's Office"
+	name = "\improper Command - IAA's Office"
 	req_access = list(access_liaison)
 
 /area/crew_quarters/heads/office/cl/backroom
 	icon_state = "heads_cl"
-	name = "\improper Command - CL's Backroom"
+	name = "\improper Command - IAA's Backroom"
 	req_access = list(access_liaison)
 
 /area/crew_quarters/heads/office/sgr
@@ -1011,7 +1011,7 @@
 // Security
 
 /area/security/bo
-	name = "\improper Security - Brig Chief"
+	name = "\improper Security - Warden"
 	icon_state = "Warden"
 	req_access = list(access_armory)
 

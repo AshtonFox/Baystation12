@@ -28,7 +28,7 @@
 	)
 
 /obj/structure/closet/secure_closet/CO
-	name = "commanding officer's locker"
+	name = "captain's locker"
 	req_access = list(access_captain)
 	closet_appearance = /decl/closet_appearance/secure_closet/torch/command/co
 
@@ -54,7 +54,7 @@
 	)
 
 /obj/structure/closet/secure_closet/XO
-	name = "executive officer's locker"
+	name = "head of personnel's locker"
 	req_access = list(access_hop)
 	closet_appearance = /decl/closet_appearance/secure_closet/torch/command/xo
 

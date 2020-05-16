@@ -403,7 +403,7 @@
 	department_flag = SPT
 	total_positions = 3
 	spawn_positions = 3
-	supervisors = "the Commanding Officer and heads of staff"
+	supervisors = "the Captain and heads of staff"
 	selection_color = "#2f2f7f"
 	minimal_player_age = 0
 	economic_power = 7

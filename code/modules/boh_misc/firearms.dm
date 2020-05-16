@@ -13,14 +13,14 @@
 
 /obj/item/weapon/gun/projectile/pistol/magnum_pistol/solar/loaded
 	name = "high-powered handgun"
-	desc = "The HelTek Magnus, a robust Terran handgun that uses high-caliber ammo. This one has 'To the Chief of Security Aboard the NTEV Blue Jay' engraved"
+	desc = "The HelTek Magnus, a robust Terran handgun that uses high-caliber ammo. This one has 'To the Head of Security Aboard the NTEV Blue Jay' engraved"
 	magazine_type = /obj/item/ammo_magazine/magnum/rubber
 	starts_loaded = 1
 
 /obj/item/weapon/gun/projectile/pistol/sec/solar
 	name = "Mk58"
 	desc = "The NT Mk58 is a cheap, ubiquitous sidearm, produced by a NanoTrasen subsidiary. Found pretty much everywhere humans are. \
-	'Executive Officer' is stenciled onto the grip."
+	'Head of Personnel' is stenciled onto the grip."
 	starts_loaded = 0
 
 /obj/item/weapon/gun/projectile/pistol/holdout/cap

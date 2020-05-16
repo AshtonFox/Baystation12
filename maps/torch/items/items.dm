@@ -75,13 +75,13 @@ Unique items
 ***********/
 
 /obj/item/weapon/pen/multi/cmd/xo
-	name = "executive officer's pen"
+	name = "head of personnel's pen"
 	icon = 'maps/torch/icons/obj/uniques.dmi'
 	icon_state = "pen_xo"
 	desc = "A slightly bulky pen with a silvery case. Twisting the top allows you to switch the nib for different colors."
 
 /obj/item/weapon/pen/multi/cmd/co
-	name = "commanding officer's pen"
+	name = "captain's pen"
 	icon = 'maps/torch/icons/obj/uniques.dmi'
 	icon_state = "pen_co"
 	desc = "A slightly bulky pen with a golden case. Twisting the top allows you to switch the nib for different colors."
@@ -113,7 +113,7 @@ Weapons
 ******/
 
 /obj/item/weapon/gun/energy/gun/secure/corporate
-	desc = "An access-locked EXO-branded LAEP90-S. It's designed to please paranoid corporate liaisons. Body cam not included."
+	desc = "An access-locked EXO-branded LAEP90-S. It's designed to please paranoid internal affairs agents. Body cam not included."
 	req_access = list(access_liaison)
 
 /obj/item/weapon/gun/projectile/revolver/medium/captain

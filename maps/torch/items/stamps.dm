@@ -1,9 +1,9 @@
 /obj/item/weapon/stamp/co
-	name = "commanding officer's rubber stamp"
+	name = "captain's rubber stamp"
 	icon_state = "stamp-cap"
 
 /obj/item/weapon/stamp/xo
-	name = "executive officer's rubber stamp"
+	name = "head of personnel's rubber stamp"
 	icon_state = "stamp-xo"
 
 /obj/item/weapon/stamp/sea
@@ -11,11 +11,11 @@
 	icon_state = "stamp-xo"
 
 /obj/item/weapon/stamp/cos
-	name = "chief of security's rubber stamp"
+	name = "head of security's rubber stamp"
 	icon_state = "stamp-cos"
 
 /obj/item/weapon/stamp/brig
-	name = "brig chief's rubber stamp"
+	name = "warden's rubber stamp"
 	icon_state = "stamp-brig"
 
 /obj/item/weapon/stamp/solgov

@@ -14,7 +14,7 @@
 
 /obj/item/weapon/gun/projectile/shotgun/pump/get_mechanics_info()
 	. = ..()
-	. += "<br>This gun will be allowed to fire freely once off-ship, otherwise needs to be authorized by XO. \
+	. += "<br>This gun will be allowed to fire freely once off-ship, otherwise needs to be authorized by HoP. \
 	<br>While you can load this gun with lethal ammo, there's a considerable risk of explosion when fired."
 
 /obj/item/weapon/gun/projectile/shotgun/pump/exploration/get_antag_info()
@@ -27,11 +27,11 @@
 		icon_state = "expshotgun[!!chambered]"
 	else
 		icon_state = "ghettexpshotgun[!!chambered]"
-	
+
 /obj/item/weapon/gun/projectile/shotgun/pump/exploration/Destroy()
 	QDEL_NULL(reinforced)
 	. = ..()
-	
+
 /obj/item/weapon/gun/projectile/shotgun/pump/exploration/free_fire()
 	var/my_z = get_z(src)
 	if(!GLOB.using_map.station_levels.Find(my_z))

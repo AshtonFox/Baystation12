@@ -1,5 +1,5 @@
 /obj/item/device/encryptionkey/heads/torchexec
-	name = "executive encryption key"
+	name = "captain encryption key"
 	icon_state = "cap_cypherkey"
 	channels = list("Command" = 1, "Security" = 1, "Engineering" = 1, "Science" = 1, "Medical" = 1, "Supply" = 1, "Service" = 1, "Exploration" = 1)
 
@@ -9,7 +9,7 @@
 	channels = list("Science" = 1)
 
 /obj/item/device/encryptionkey/headset_torchrd
-	name = "chief science officer radio encryption key"
+	name = "research director radio encryption key"
 	icon_state = "nt_cypherkey"
 	channels = list("Science" = 1, "Command" = 1, "Exploration" = 1)
 
@@ -19,7 +19,7 @@
 	channels = list("Service" = 1)
 
 /obj/item/device/encryptionkey/headset_torchcl
-	name = "corporate liaison radio encryption key"
+	name = "internal affairs agent radio encryption key"
 	icon_state = "nt_cypherkey"
 	channels = list("Service" = 1, "Command" = 1)
 

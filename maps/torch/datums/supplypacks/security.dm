@@ -152,7 +152,7 @@
 	access = access_solgov_crew
 
 /decl/hierarchy/supply_pack/security/securityextragear
-	name = "Gear - Master at Arms equipment"
+	name = "Gear - Security Officer equipment"
 	contains = list(/obj/item/device/radio/headset/headset_sec,
 					/obj/item/device/radio/headset/headset_sec/alt,
 					/obj/item/weapon/storage/belt/holster/security,
@@ -172,11 +172,11 @@
 					/obj/item/weapon/storage/belt/security)
 	cost = 60
 	containertype = /obj/structure/closet/crate/secure
-	containername = "\improper Master at Arms equipment crate"
+	containername = "\improper Security Officer equipment crate"
 	access = access_security
 
 /decl/hierarchy/supply_pack/security/cosextragear
-	name = "Gear - Chief of Security equipment"
+	name = "Gear - Head of Security equipment"
 	contains = list(/obj/item/device/radio/headset/heads/cos,
 					/obj/item/clothing/glasses/sunglasses/sechud/goggles,
 					/obj/item/taperoll/police,
@@ -187,7 +187,7 @@
 					/obj/item/device/flashlight/maglight,)
 	cost = 40
 	containertype = /obj/structure/closet/crate/secure
-	containername = "\improper Chief of Security equipment crate"
+	containername = "\improper Head of Security equipment crate"
 	access = access_hos
 
 /decl/hierarchy/supply_pack/security/practicelasers

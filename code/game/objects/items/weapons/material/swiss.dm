@@ -25,7 +25,7 @@
 	var/sharp_tools = list(SWISSKNF_LBLADE, SWISSKNF_SBLADE, SWISSKNF_GBLADE, SWISSKNF_WBLADE)
 
 /obj/item/weapon/material/knife/folding/swiss/attack_self(mob/user)
-	var/choice	
+	var/choice
 	if(user.a_intent != I_HELP && ((SWISSKNF_LBLADE in tools) || (SWISSKNF_SBLADE in tools)) && active_tool == SWISSKNF_CLOSED)
 		open = TRUE
 		if(SWISSKNF_LBLADE in tools)
@@ -38,7 +38,7 @@
 		else
 			choice = SWISSKNF_CLOSED
 			open = FALSE
-	
+
 	if(!choice || !CanPhysicallyInteract(user))
 		return
 	if(choice == SWISSKNF_CLOSED)
@@ -51,7 +51,7 @@
 			playsound(user, 'sound/weapons/flipblade.ogg', 15, 1)
 		else
 			user.visible_message("<span class='notice'>\The [user] opens the [lowertext(choice)].</span>")
-			
+
 	active_tool = choice
 	update_force()
 	update_icon()
@@ -117,14 +117,14 @@
 	return ..()
 
 /obj/item/weapon/material/knife/folding/swiss/officer
-	name = "officer's combi-knife"
+	name = "command combi-knife"
 	desc = "A small, blue, multi-purpose folding knife. This one adds a corkscrew."
 	color = COLOR_COMMAND_BLUE
 
 	tools = list(SWISSKNF_LBLADE, SWISSKNF_CLIFTER, SWISSKNF_COPENER, SWISSKNF_CSCREW)
 
 /obj/item/weapon/material/knife/folding/swiss/sec
-	name = "Master-At-Arms' combi-knife"
+	name = "security officer's combi-knife"
 	desc = "A small, red, multi-purpose folding knife. This one adds no special tools."
 	color = COLOR_NT_RED
 

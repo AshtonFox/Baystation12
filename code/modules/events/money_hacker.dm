@@ -22,7 +22,7 @@
 		without intervention this attack will succeed in approximately 10 minutes. Required intervention: temporary suspension of affected accounts until the attack has ceased. \
 		Notifications will be sent as updates occur."
 		var/my_department = "[location_name()] Firewall Subroutines"
-		MS.send_rc_message("XO's Desk", my_department, message, "", "", 2)
+		MS.send_rc_message("HoP's Desk", my_department, message, "", "", 2)
 
 
 /datum/event/money_hacker/tick()
@@ -50,10 +50,10 @@
 		var/time1 = rand(0, 99999999)
 		var/time2 = "[round(time1 / 36000)+12]:[(time1 / 600 % 60) < 10 ? add_zero(time1 / 600 % 60, 1) : time1 / 600 % 60]"
 		T.time = pick("", stationtime2text(), time2)
-		
+
 		T.perform()
 
 	var/obj/machinery/message_server/MS = get_message_server()
 	if(MS)
 		var/my_department = "[location_name()] Firewall Subroutines"
-		MS.send_rc_message("XO's Desk", my_department, message, "", "", 2)
+		MS.send_rc_message("HoP's Desk", my_department, message, "", "", 2)

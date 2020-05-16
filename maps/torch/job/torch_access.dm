@@ -58,7 +58,7 @@
 /var/const/access_liaison = "ACCESS_TORCH_CORPORATE_LIAISON" //84
 /datum/access/liaison
 	id = access_liaison
-	desc = "Corporate Liaison"
+	desc = "Internal Affairs Agent"
 	region = ACCESS_REGION_COMMAND
 	access_type = ACCESS_TYPE_NONE //Ruler of their own domain, CO and RD cannot enter
 
@@ -139,10 +139,10 @@
 	desc = "Mental Health"
 
 /datum/access/hos
-	desc = "Chief of Security"
+	desc = "Head of Security"
 
 /datum/access/hop
-	desc = "Executive Officer"
+	desc = "Head of Personnel"
 
 /datum/access/qm
 	desc = "Deck Chief"
@@ -199,7 +199,7 @@
 /var/const/access_petrov_rd = "ACCESS_TORCH_PETROV_RD" //206
 /datum/access/petrov_rd
 	id = access_petrov_rd
-	desc = "NTRL Owl Chief Science Officer's Office"
+	desc = "NTRL Owl Research Director's Office"
 	region = ACCESS_REGION_NT
 
 /var/const/access_petrov_security = "ACCESS_TORCH_PETROV_SEC" //207
