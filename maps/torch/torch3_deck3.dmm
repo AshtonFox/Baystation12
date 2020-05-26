@@ -1815,7 +1815,7 @@
 "NC" = (/obj/structure/cable/cyan{d1 = 4; d2 = 8; icon_state = "4-8"},/turf/simulated/floor/tiled/dark/monotile,/area/tcommsat/chamber)
 "ND" = (/obj/structure/sign/warning/server_room,/turf/simulated/wall/prepainted,/area/tcommsat/computer)
 "NE" = (/obj/effect/floor_decal/corner/green{dir = 4},/turf/simulated/floor/tiled,/area/hallway/primary/thirddeck/fore)
-"NF" = (/obj/machinery/door/airlock/civilian{name = "Lounge"},/turf/simulated/floor/tiled/white/monotile,/area/crew_quarters/sleep/cryo)
+"NF" = (/obj/machinery/door/firedoor,/obj/machinery/door/airlock/civilian{name = "Lounge"},/turf/simulated/floor/tiled/white/monotile,/area/crew_quarters/sleep/cryo)
 "NH" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4},/obj/structure/cable/green{d1 = 4; d2 = 8; icon_state = "4-8"},/obj/structure/disposalpipe/segment{dir = 4},/turf/simulated/floor/tiled/techfloor,/area/maintenance/thirddeck/starboard)
 "NL" = (/obj/random/obstruction,/turf/simulated/floor/tiled/techfloor/grid,/area/maintenance/thirddeck/foreport)
 "NM" = (/obj/machinery/media/jukebox/old,/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/plating,/area/vacant/mess)
