@@ -142,7 +142,7 @@
 	name = "foam dart crossbow"
 	desc = "A weapon favored by many overactive children. Ages 8 and up."
 	icon = 'icons/obj/guns/energy_crossbow.dmi'
-	icon_state = "crossbow"
+	icon_state = "crossbow0"
 	item_state = "crossbow"
 	item_icons = list(
 		icon_l_hand = 'icons/mob/onmob/items/lefthand_guns.dmi',
