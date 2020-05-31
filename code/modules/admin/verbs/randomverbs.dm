@@ -894,3 +894,20 @@ Traitors and the like can also be revived with the previous role mostly intact.
 		to_chat(usr, "Random events disabled")
 		message_admins("Admin [key_name_admin(usr)] has disabled random events.", 1)
 	SSstatistics.add_field_details("admin_verb","TRE") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
+
+/client/proc/end_round()
+	set category = "Admin"
+	set name = "End Round"
+
+	set desc = "Will immediately end the current round and show the end titles."
+
+	if(!SSticker.mode || !evacuation_controller)
+		return
+
+	if(!check_rights(R_ADMIN))	return
+
+	if(alert(src, "Are you sure you want to end the current round?", "Confirm", "Yes", "No") != "Yes") return
+
+	evacuation_controller.finish_evacuation()
+	log_and_message_admins("forced the immediate end of the round.")
+	return
