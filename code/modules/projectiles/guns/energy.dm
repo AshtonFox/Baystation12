@@ -87,24 +87,25 @@
 		var/shots_remaining = round(power_supply.charge / charge_cost)
 		to_chat(user, "Has [shots_remaining] shot\s remaining.")
 
-/obj/item/weapon/gun/energy/on_update_icon()
-	..()
-	if(charge_meter && power_supply)
-		var/ratio = power_supply.percent()
+		/obj/item/weapon/gun/energy/on_update_icon()
+			..()
+			if(charge_meter && power_supply)
+				var/ratio = power_supply.percent()
 
-		//make sure that rounding down will not give us the empty state even if we have charge for a shot left.
-		// Also make sure cells adminbussed with higher-than-max charge don't break sprites
-		if(power_supply.charge < charge_cost)
-			ratio = 0
-		else
-			ratio = Clamp(round(ratio, 25), 25, 100)
+				//make sure that rounding down will not give us the empty state even if we have charge for a shot left.
+				// Also make sure cells adminbussed with higher-than-max charge don't break sprites
+				if(power_supply.charge < charge_cost)
+					ratio = 0
+				else
+					ratio = Clamp(round(ratio, 25), 25, 100)
 
-		if(modifystate)
-			icon_state = "[modifystate][ratio]"
-		else
-			icon_state = "[initial(icon_state)][ratio]"
-	else
-		if(modifystate)
-			icon_state = "[modifystate]0"
-		else
-			icon_state = "[initial(icon_state)]0"
+				if(modifystate)
+					icon_state = "[modifystate][ratio]"
+				else
+					icon_state = "[initial(icon_state)][ratio]"
+			else
+				if(modifystate)
+					icon_state = "[modifystate]0"
+				else
+					icon_state = "[initial(icon_state)]0"
+				update_held_icon()
