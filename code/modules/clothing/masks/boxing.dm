@@ -12,6 +12,7 @@
 	w_class = ITEM_SIZE_SMALL
 	sprite_sheets = list(
 		SPECIES_UNATHI = 'icons/mob/species/unathi/onmob_mask_unathi.dmi',
+		SPECIES_RESOMI = 'frontier/icons/mob/species/resomi/onmob_mask_resomi.dmi'
 		)
 
 /obj/item/clothing/mask/balaclava/tactical
