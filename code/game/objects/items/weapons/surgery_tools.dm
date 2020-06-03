@@ -119,7 +119,6 @@
 	desc = "A true extension of the surgeon's body, this marvel instantly and completely prepares an incision allowing for the immediate commencement of therapeutic steps."
 	icon_state = "scalpel_manager_on"
 	force = 7.5
-	var/wrapped = 0
 
 /*
  * Circular Saw
