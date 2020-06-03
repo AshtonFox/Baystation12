@@ -56,6 +56,24 @@
 		-->
 		<div class="commit sansserif">
 
+			<h2 class="date">03 June 2020</h2>
+			<h3 class="author">Builder-13 updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="rscadd">Добавлена возможность загружать пИИ и оружие на соответствующие платы без их переподсоединения. По клику на открытый корпус может быть предложено установить на соответствующие платы.</li>
+				<li class="rscadd">Добавлен входящий параметр Instruction для intelligence control module с поддержкой тега br, сюда можно записать, к примеру, инструкцию по управлению, которая будет отображаться для пИИ/ММИ при установке в плату.</li>
+				<li class="rscadd">Добавлена возможность вставлять гранату в соответствующую плату через клик по открытому корпусу.</li>
+				<li class="rscadd">Добавлена плата floor magnet в раздел manipulation, в активном состоянии потребляет энергию и не дает взять устройство с пола. Все ещё может перемещаться самостоятельно и через pull. Работает только с полом типа /turf/simulated/floor/; на тайле с космосом, к примеру, можно взять даже в активном состоянии.</li>
+				<li class="tweak">Для платы integrated intellegence control добавлено выходящее значение Clicked Ref (референс предмета, по которому кликает пИИ в плате) и активаторы on click, middle click, double click, shift click, ctrl click, alt click, которые отслеживают соответствующие клики пИИ в плате.</li>
+				<li class="tweak">Добавлена ссылка [Remove Item] в интерфейсе для плат grenade primer, weapon firing mechanism, intelligence control module для быстрого изъятия из них вещей без пересборки.</li>
+				<li class="tweak">Добавлен активатор on push ref для большинства плат, связанных с реагентами, ради упрощения взаимодействия с ними.</li>
+			</ul>
+			<h3 class="author">RenardQueenston updated:</h3>
+			<ul class="changes bgimages16">
+				<li class="admin">End Round перенесён из Admin в Server.</li>
+				<li class="admin">Browse Server Logs переименован в Server Logs Browser.</li>
+				<li class="admin">Get Server Log переименован в Today's Server Log.</li>
+			</ul>
+
 			<h2 class="date">01 June 2020</h2>
 			<h3 class="author">AshtonFox updated:</h3>
 			<ul class="changes bgimages16">
