@@ -896,7 +896,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 	SSstatistics.add_field_details("admin_verb","TRE") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/end_round()
-	set category = "Admin"
+	set category = "Server"
 	set name = "End Round"
 
 	set desc = "Will immediately end the current round and show the end titles."

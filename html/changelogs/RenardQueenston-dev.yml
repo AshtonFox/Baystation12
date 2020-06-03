@@ -1,0 +1,8 @@
+author: RenardQueenston
+
+delete-after: True
+
+changes:
+  - admin: "End Round перенесён из Admin в Server."
+  - admin: "Browse Server Logs переименован в Server Logs Browser."
+  - admin: "Get Server Log переименован в Today's Server Log."
