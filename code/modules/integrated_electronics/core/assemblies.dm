@@ -27,6 +27,7 @@
 	var/static/next_assembly_id = 0
 	var/interact_page = 0
 	var/components_per_page = 5
+	var/magnetized = 0 //Frontier add
 	health = 30
 	pass_flags = 0
 	anchored = FALSE
@@ -456,6 +457,8 @@
 		var/obj/item/device/integrated_electronics/detailer/D = I
 		detail_color = D.detail_color
 		update_icon()
+	else if(is_type_in_list(I, list(/obj/item/weapon/gun/energy/, /obj/item/weapon/grenade/, /obj/item/weapon/aicard, /obj/item/device/paicard, /obj/item/device/mmi, /obj/item/organ/internal/posibrain/)) && opened) //Frontier add start
+		loading(I,user) ////Frontier add end
 	else if(istype(I, /obj/item/weapon/screwdriver))
 		var/hatch_locked = FALSE
 		for(var/obj/item/integrated_circuit/manipulation/hatchlock/H in assembly_components)
@@ -516,7 +519,7 @@
 	return src
 
 /obj/item/device/electronic_assembly/attack_hand(mob/user)
-	if(anchored)
+	if(anchored || (magnetized && istype(src.loc, /turf/simulated/floor/))) //Frontier edit
 		attack_self(user)
 		return
 	..()

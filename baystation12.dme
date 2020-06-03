@@ -3228,6 +3228,8 @@
 #include "frontier\code\modules\emoji\emoji_parse.dm"
 #include "frontier\code\modules\emotes\definitions\_species.dm"
 #include "frontier\code\modules\emotes\definitions\audible.dm"
+#include "frontier\code\modules\integrated_electronics\core\assemblies.dm"
+#include "frontier\code\modules\integrated_electronics\subtypes\manipulation.dm"
 #include "frontier\code\modules\mob\holder.dm"
 #include "frontier\code\modules\mob\language\alien\resomi.dm"
 #include "frontier\code\modules\mob\living\carbon\human\human_powers.dm"

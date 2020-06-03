@@ -40,7 +40,8 @@
 	activators = list(
 		"create smoke" = IC_PINTYPE_PULSE_IN,
 		"on smoked" = IC_PINTYPE_PULSE_OUT,
-		"push ref" = IC_PINTYPE_PULSE_IN
+		"push ref" = IC_PINTYPE_PULSE_IN,
+		"on push ref" = IC_PINTYPE_PULSE_OUT //Frontier add
 		)
 	spawn_flags = IC_SPAWN_RESEARCH
 	power_draw_per_use = 20
@@ -68,6 +69,7 @@
 			activate_pin(2)
 		if(3)
 			set_pin_data(IC_OUTPUT, 2, weakref(src))
+			activate_pin(4) //Frontier add
 			push_data()
 
 /obj/item/integrated_circuit/reagent/injector
@@ -97,8 +99,8 @@
 		"inject" = IC_PINTYPE_PULSE_IN,
 		"on injected" = IC_PINTYPE_PULSE_OUT,
 		"on fail" = IC_PINTYPE_PULSE_OUT,
-		"push ref" = IC_PINTYPE_PULSE_IN
-
+		"push ref" = IC_PINTYPE_PULSE_IN,
+		"on push ref" = IC_PINTYPE_PULSE_OUT //Frontier add
 		)
 	spawn_flags = IC_SPAWN_DEFAULT|IC_SPAWN_RESEARCH
 	power_draw_per_use = 15
@@ -127,6 +129,7 @@
 			inject()
 		if(4)
 			set_pin_data(IC_OUTPUT, 2, weakref(src))
+			activate_pin(5) //Frontier add
 			push_data()
 
 /obj/item/integrated_circuit/reagent/injector/proc/target_nearby(var/weakref/target)
@@ -312,13 +315,14 @@
 		"volume used" = IC_PINTYPE_NUMBER,
 		"self reference" = IC_PINTYPE_REF
 		)
-	activators = list("push ref" = IC_PINTYPE_PULSE_IN)
+	activators = list("push ref" = IC_PINTYPE_PULSE_IN, "on push ref" = IC_PINTYPE_PULSE_OUT) //Frontier edit
 	spawn_flags = IC_SPAWN_DEFAULT|IC_SPAWN_RESEARCH
 
 
 
 /obj/item/integrated_circuit/reagent/storage/do_work()
 	set_pin_data(IC_OUTPUT, 2, weakref(src))
+	activate_pin(2) //Frontier add
 	push_data()
 
 /obj/item/integrated_circuit/reagent/storage/on_reagent_change(changetype)
@@ -360,7 +364,8 @@
 		"grind" = IC_PINTYPE_PULSE_IN,
 		"on grind" = IC_PINTYPE_PULSE_OUT,
 		"on fail" = IC_PINTYPE_PULSE_OUT,
-		"push ref" = IC_PINTYPE_PULSE_IN
+		"push ref" = IC_PINTYPE_PULSE_IN,
+		"on push ref" = IC_PINTYPE_PULSE_OUT //Frontier add
 		)
 	volume = 100
 	power_draw_per_use = 150
@@ -374,6 +379,7 @@
 			grind()
 		if(4)
 			set_pin_data(IC_OUTPUT, 2, weakref(src))
+			activate_pin(5) //Frontier add
 			push_data()
 
 /obj/item/integrated_circuit/reagent/storage/grinder/proc/grind()
@@ -412,7 +418,8 @@
 		)
 	activators = list(
 		"scan" = IC_PINTYPE_PULSE_IN,
-		"push ref" = IC_PINTYPE_PULSE_IN
+		"push ref" = IC_PINTYPE_PULSE_IN,
+		"on push ref" = IC_PINTYPE_PULSE_OUT //Frontier add
 		)
 	spawn_flags = IC_SPAWN_RESEARCH
 
@@ -426,6 +433,7 @@
 			push_data()
 		if(2)
 			set_pin_data(IC_OUTPUT, 2, weakref(src))
+			activate_pin(3) //Frontier add
 			push_data()
 
 /obj/item/integrated_circuit/reagent/filter
@@ -546,7 +554,8 @@
 	activators = list(
 		"toggle" = IC_PINTYPE_PULSE_IN,
 		"on toggle" = IC_PINTYPE_PULSE_OUT,
-		"push ref" = IC_PINTYPE_PULSE_IN
+		"push ref" = IC_PINTYPE_PULSE_IN,
+		"on push ref" = IC_PINTYPE_PULSE_OUT //Frontier add
 	)
 
 	atom_flags = ATOM_FLAG_OPEN_CONTAINER
@@ -590,6 +599,7 @@
 				QUEUE_TEMPERATURE_ATOMS(src)
 		if(3)
 			set_pin_data(IC_OUTPUT, 4, weakref(src))
+			activate_pin(4) //Frontier add
 			push_data()
 
 /obj/item/integrated_circuit/reagent/temp/on_reagent_change()

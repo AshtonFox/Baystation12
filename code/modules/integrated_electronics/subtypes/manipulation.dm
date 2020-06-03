@@ -60,6 +60,9 @@
 		..()
 
 /obj/item/integrated_circuit/manipulation/weapon_firing/attack_self(var/mob/user)
+	eject_gun(user) //Frontier add start
+
+/obj/item/integrated_circuit/manipulation/weapon_firing/proc/eject_gun(var/mob/user) //Frontier add end
 	if(installed_gun)
 		installed_gun.dropInto(loc)
 		to_chat(user, "<span class='notice'>You slide \the [installed_gun] out of the firing mechanism.</span>")
@@ -596,9 +599,13 @@
 	cooldown_per_use = 1 SECOND
 	power_draw_per_use = 20
 	var/obj/item/aicard
-	activators = list("Upwards" = IC_PINTYPE_PULSE_OUT, "Downwards" = IC_PINTYPE_PULSE_OUT, "Left" = IC_PINTYPE_PULSE_OUT, "Right" = IC_PINTYPE_PULSE_OUT)
+	inputs = list("Instructions" = IC_PINTYPE_STRING) //Frontier add start
+	outputs = list("AI's signature" = IC_PINTYPE_STRING, "Clicked Ref" = IC_PINTYPE_REF) //Frontier add end
+	activators = list("Upwards" = IC_PINTYPE_PULSE_OUT, "Downwards" = IC_PINTYPE_PULSE_OUT, "Left" = IC_PINTYPE_PULSE_OUT, "Right" = IC_PINTYPE_PULSE_OUT, "Push AI Name" = IC_PINTYPE_PULSE_IN,  "On click" = IC_PINTYPE_PULSE_OUT, "On middle click" = IC_PINTYPE_PULSE_OUT, "On double click" = IC_PINTYPE_PULSE_OUT, "On shift click" = IC_PINTYPE_PULSE_OUT, "On ctrl click" = IC_PINTYPE_PULSE_OUT, "On alt click" = IC_PINTYPE_PULSE_OUT) //Frontier edit
 	origin_tech = list(TECH_DATA = 4)
 	spawn_flags = IC_SPAWN_RESEARCH
+	var/eol = "&lt;br&gt;" //Frontier add start
+	var/instruction = null //Frontier add end
 
 /obj/item/integrated_circuit/manipulation/ai/verb/open_menu()
 	set name = "Control Inputs"
@@ -628,14 +635,26 @@
 	if(L && L.key && user.unEquip(card))
 		L.forceMove(src)
 		controlling = L
+		controlling.PushClickHandler(/datum/click_handler/default/aimodule) //Frontier add
 		card.dropInto(src)
 		aicard = card
 		user.visible_message("\The [user] loads \the [card] into \the [src]'s device slot")
 		to_chat(L, "<span class='notice'>### IICC FIRMWARE LOADED ###</span>")
+	var/datum/integrated_io/P = inputs[1] //Frontier add start
+	if(isweakref(P.data))
+		var/datum/d = P.data_as_type(/datum)
+		if(d)
+			instruction = "[d]"
+	else
+		instruction = replacetext("[P.data]", eol , "<br>")
+
+	if(instruction)
+		to_chat(L, instruction) //Frontier add end
 
 /obj/item/integrated_circuit/manipulation/ai/proc/unload_ai()
 	if(!controlling)
 		return
+	controlling.RemoveClickHandler(/datum/click_handler/default/aimodule) //Frontier add
 	controlling.forceMove(aicard)
 	to_chat(controlling, "<span class='notice'>### IICC FIRMWARE DELETED. HAVE A NICE DAY ###</span>")
 	src.visible_message("\The [aicard] pops out of \the [src]!")
