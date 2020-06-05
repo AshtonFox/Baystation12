@@ -46,6 +46,26 @@
 					LANGUAGE_RESOMI
 	)
 
+/datum/species/diona
+	autohiss_basic_map = list(
+			"о" = list("оо", "ооо", "о-о-о")
+		)
+	autohiss_extra_map = list(
+			"а" = list("аа", "ааа", "а-а"),
+			"е" = list("ее", "еее", "е-е"),
+			"ё" = list("ёо", "ёоо", "ё-о"),
+			"и" = list("ии", "иии", "и-и"),
+			"у" = list("уу", "ууу", "у-у"),
+			"ы" = list("ыы", "ыыы", "ы-ы"),
+			"э" = list("ээ", "эээ", "э-э"),
+			"ю" = list("юу", "юуу", "ю-у"),
+			"я" = list("яа", "яаа", "я-а")
+		)
+	autohiss_exempt = list(
+					LANGUAGE_ROOTLOCAL,
+					LANGUAGE_ROOTGLOBAL
+	)
+
 /datum/species/proc/handle_autohiss(message, datum/language/lang, mode)
 	if(!autohiss_basic_map)
 		return message

@@ -1,0 +1,8 @@
+author: RenardQueenston
+
+delete-after: True
+
+changes:
+  - rscadd: "Добавлен автохисс для Дион."
+  - imageadd: "Добавлен эмодзи `agony`."
+  - tweak: "Русские спич-вёрбы для Резоми заменены английскими аналогами."

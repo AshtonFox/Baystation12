@@ -1,9 +1,9 @@
 /datum/language/resomi
 	name = LANGUAGE_RESOMI
 	desc = "A trilling language spoken by the diminutive Resomi."
-	speech_verb = "щебечет"
-	ask_verb = "чирикает"
-	exclaim_verb = "верещит"
+	speech_verb = "chirps"
+	ask_verb = "tweets"
+	exclaim_verb = "squawks"
 	colour = "alien"
 	key = "e"
 	flags = WHITELISTED
