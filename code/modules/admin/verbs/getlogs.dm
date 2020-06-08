@@ -61,7 +61,7 @@
 //It works similarly to show-server-log.
 /client/proc/getserverlog()
 	set category = "Admin"
-	set name = "Browse Server Logs"
+	set name = "Server Logs Browser"
 	set desc = "Fetch logfiles from data/logs"
 
 	var/path = browse_files("data/logs/")
@@ -82,7 +82,7 @@
 //Shows today's server log
 /datum/admins/proc/view_txt_log()
 	set category = "Admin"
-	set name = "Get Server Log"
+	set name = "Today's Server Log"
 	set desc = "Fetches today's server log."
 
 	var/path = "data/logs/[time2text(world.realtime,"YYYY/MM/DD")].log"

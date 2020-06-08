@@ -119,7 +119,9 @@ GLOBAL_LIST_INIT(music_tracks, list(
 	"Ocean Man" = /music_track/oceanman,
 	"Rocket Rider's Prayer" = /music_track/rocketridersprayer,
 	"Shooting Stars" = /music_track/shootingstars,
-	"Guardians" = /music_track/guardians //Frontier add end
+	"Guardians" = /music_track/guardians
+	"Title Theme" = /music_track/titletheme
+	"Cleavage" = /music_track/cleavage //Frontier add end
 ))
 
 /proc/setup_music_tracks(var/list/tracks)

@@ -888,3 +888,6 @@ default behaviour is:
 
 /mob/living/proc/eyecheck()
 	return FLASH_PROTECTION_NONE
+
+/mob/living/proc/InStasis()
+	return FALSE

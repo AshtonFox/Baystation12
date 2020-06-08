@@ -73,3 +73,17 @@
 	song = 'sound/music/frontier/guardians.ogg'
 	license = /decl/license/grandfathered
 	url = "https://www.youtube.com/watch?v=UqU7W8LdRd4"
+
+/music_track/titletheme
+	artist = "Blinch"
+	title = "Title Theme"
+	song = 'sound/music/frontier/titlescreen.ogg'
+	license = /decl/license/grandfathered
+	url = "https://youtu.be/lcOljZt73cQ"
+
+/music_track/cleavage
+	artist = "Blinch"
+	title = "Cleavage"
+	song = 'sound/music/frontier/cleavage.ogg'
+	license = /decl/license/grandfathered
+	url = "https://youtu.be/SBAv-FcXHlI"

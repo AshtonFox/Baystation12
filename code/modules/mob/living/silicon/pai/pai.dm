@@ -217,6 +217,12 @@ GLOBAL_LIST_INIT(possible_say_verbs, list(
 
 	if(world.time <= last_special)
 		return
+
+	var/obj/item/integrated_circuit/manipulation/ai/A = src.loc //Frontier add start
+	if(istype(A))
+		A.unload_ai()
+		src.visible_message("[src] ejects from [A].") //Frontier add end
+
 	last_special = world.time + 100
 
 	// Move us into the card and move the card to the ground.

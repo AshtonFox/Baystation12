@@ -108,3 +108,4 @@
 			icon_state = "[modifystate]0"
 		else
 			icon_state = "[initial(icon_state)]0"
+		update_held_icon()

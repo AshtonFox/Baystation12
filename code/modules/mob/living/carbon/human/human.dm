@@ -645,7 +645,10 @@
 /mob/living/carbon/human/get_species()
 	if(!species)
 		set_species()
-	return species.name
+	if(custom_species)
+		return custom_species
+	else
+		return species.name
 
 /mob/living/carbon/human/proc/play_xylophone()
 	if(!src.xylophone)
@@ -715,9 +718,9 @@
 		if(stomach.ingested.total_volume)
 			stomach.ingested.trans_to_holder(D.reagents, 15)
 		return
-			
+
 	var/turf/location = loc
-	
+
 	visible_message(SPAN_DANGER("\The [src] throws up!"),SPAN_DANGER("You throw up!"))
 	playsound(loc, 'sound/effects/splat.ogg', 50, 1)
 	if(istype(location, /turf/simulated))
