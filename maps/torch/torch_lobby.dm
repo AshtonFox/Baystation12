@@ -32,5 +32,7 @@
 		/music_track/oceanman,
 		/music_track/rocketridersprayer,
 		/music_track/shootingstars,
-		/music_track/guardians //Frontier add end
+		/music_track/guardians,
+		/music_track/titletheme,
+		/music_track/cleavage		 //Frontier add end
 	)
