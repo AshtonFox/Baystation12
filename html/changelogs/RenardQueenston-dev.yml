@@ -1,0 +1,8 @@
+author: RenardQueenston
+
+delete-after: True
+
+changes:
+  - maptweak: "Убраны опознавательные знаки СолГова по периметру Сойки."
+  - maptweak: "Добавлен рассеиватель щита на корабль Скреллов."
+  - maptweak: "Добавлена точка появления для Vox Armalis на базе Воксов."

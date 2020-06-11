@@ -20,13 +20,17 @@
 
 	unarmed_types = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/punch, /datum/unarmed_attack/bite)
 
-	description = "This is a genemodded species - either human or some of established ones. Genemods, initially \
-	patented by VeyMed, were made popular about the middle of the 22nd century, and have only increased in number since. \
-	While new genomodders appear by making changes to DNA at an early stage of development, there are also those whose \
-	ancestors, also genomodders with similar modifications, passed their genes on to subsequent generations. Changes made with DNA can have various and significant phenotypic implications. \
-	It can also work as subspecies or hybrid of some sorts. Here you can assign various gene traits to them as you wish, \
-	to create a (hopefully) balanced genemodder. You will see the options to customize them on the Genemods tab once \
-	you select and set this species as your species, so please, look into here if you select this."
+	description = "This is a genemodded or custom species. \
+	Genemodes, initially patented by VeyMed, were made popular about the middle of the 22nd century, and have only increased in number since. \
+	While new genomodders appear by making changes to DNA at an early stage of development, there are also those whose ancestors, \
+	also genomodders with similar modifications, passed their genes on to subsequent generations. \
+	Changes made with DNA can have various and significant phenotypic implications. \
+	Here you can assign various gene traits to them as you wish, to create a (hopefully) balanced genemodder. \
+	It can also works as custom species (whose meant to be not only a genemodder), subspecies or hybrid of some sorts. \
+	You may bring in your own special snowflake! As long as they, and by extension you, follow our rules over playing server appropriate characters. \
+	You must be sure that the history of your custom species is plausible. \
+	You will see the options to customize them on the Genemods tab once you select and set this species as your species, \
+	so please, look into here if you select this."
 
 	min_age = 18
 	max_age = 200
