@@ -3,6 +3,7 @@
 	var/brute_mult = 1
 	var/fire_mult = 1
 	var/tox_mult = 1
+	var/oxy_mult = 0 //BoH add
 
 /obj/aura/regenerating/life_tick()
 	user.adjustBruteLoss(-brute_mult)
@@ -43,6 +44,9 @@
 	if(tox_mult && H.getToxLoss())
 		H.adjustToxLoss(-tox_mult * config.organ_regeneration_multiplier)
 		H.adjust_nutrition(-nutrition_damage_mult)
+	if(oxy_mult && H.getOxyLoss()) //BoH add start
+		H.adjustToxLoss(-oxy_mult * config.organ_regeneration_multiplier)
+		H.adjust_nutrition(-nutrition_damage_mult) //BoH add end
 
 	if(!can_regenerate_organs())
 		return 1
@@ -73,7 +77,7 @@
 	if(prob(grow_chance))
 		for(var/limb_type in H.species.has_limbs)
 			var/obj/item/organ/external/E = H.organs_by_name[limb_type]
-			if(E && E.organ_tag != BP_HEAD && !E.vital && (E.is_stump() || E.status & ORGAN_DEAD))	//Skips heads and vital bits...
+			if(E && E.organ_tag != ignore_tag && !E.vital && !E.is_usable())	//Skips ignored organs and vital bits... BoH edit
 				if (H.nutrition > grow_threshold)
 					E.removed()			//...because no one wants their head to explode to make way for a new one.
 					qdel(E)
@@ -178,3 +182,19 @@
 	brute_mult = 1.5
 	organ_mult = 3
 	tox_mult = 2
+
+/obj/aura/regenerating/human/promethean //BoH add start
+	brute_mult = 3
+	fire_mult = 3
+	tox_mult = 3
+	oxy_mult = 3
+	nutrition_damage_mult = 2
+	organ_mult = 2
+	regen_message = "<span class='warning'>You feel a soothing sensation within your ORGAN.</span>"
+	grow_chance = 20
+	grow_threshold = 50
+	external_nutrition_mult = 10
+
+/obj/aura/regenerating/human/promethean/external_regeneration_effect(var/obj/item/organ/external/O, var/mob/living/carbon/human/H)
+	to_chat(H, "<span class='warning'>You feel a slithering sensation as your [O.name] reforms.</span>")
+	H.adjust_nutrition(-external_nutrition_mult) //BoH add end
