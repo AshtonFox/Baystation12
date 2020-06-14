@@ -43,8 +43,6 @@ var/datum/species/shapeshifter/promethean/prometheans
 	rarity_value =        5
 	limbs_are_nonsolid =  TRUE
 	slowdown = 0.5
-	darksight_range = 3
-	darksight_tint = DARKTINT_MODERATE
 
 	unarmed_types = list(/datum/unarmed_attack/slime_glomp)
 	has_organ =     list(BP_SLIMECORE = /obj/item/organ/internal/brain/slime) // Slime core.
