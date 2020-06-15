@@ -98,6 +98,12 @@
 				/datum/mil_rank/ec/e5
 			)
 		),
+		/datum/species/unathi/yeosa = list(
+			/datum/mil_branch/expeditionary_corps = list(
+				/datum/mil_rank/ec/e3,
+				/datum/mil_rank/ec/e5
+			)
+		),
 		/datum/species/vox = list(
 			/datum/mil_branch/alien = list(
 				/datum/mil_rank/alien

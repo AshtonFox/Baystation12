@@ -476,6 +476,7 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/borderfloor/full,
+/obj/effect/submap_landmark/spawnpoint/voxarm_crew,
 /turf/simulated/floor/plating/vox,
 /area/voxship/ship)
 "bw" = (
@@ -2017,6 +2018,11 @@
 /obj/structure/inflatable/door,
 /turf/simulated/floor/tiled/techmaint/vox,
 /area/space)
+"GN" = (
+/obj/effect/floor_decal/borderfloor/full,
+/obj/effect/submap_landmark/spawnpoint/voxarm_crew,
+/turf/simulated/floor/plating/vox,
+/area/voxship/ship)
 "Lt" = (
 /obj/structure/cable{
 	d1 = 4;
@@ -5431,7 +5437,7 @@ aM
 aM
 bi
 bv
-bH
+GN
 bt
 dk
 cn
