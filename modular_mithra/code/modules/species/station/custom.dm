@@ -162,6 +162,21 @@
 		)
 	)
 
+	exertion_effect_chance = 10
+	exertion_hydration_scale = 1
+	exertion_charge_scale = 1
+	exertion_reagent_scale = 5
+	exertion_reagent_path = /datum/reagent/lactate
+	exertion_emotes_biological = list(
+		/decl/emote/exertion/biological,
+		/decl/emote/exertion/biological/breath,
+		/decl/emote/exertion/biological/pant
+	)
+	exertion_emotes_synthetic = list(
+		/decl/emote/exertion/synthetic,
+		/decl/emote/exertion/synthetic/creak
+	)
+
 /datum/species/custom/get_bodytype(var/mob/living/carbon/human/H)
 	var/datum/species/real = all_species[base_species]
 	return real.name

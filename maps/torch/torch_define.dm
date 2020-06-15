@@ -24,10 +24,10 @@
 	company_short = "NT"
 
 	map_admin_faxes = list(
-		"Expeditionary Corps Command",
-		"Expeditionary Corps Logistics",
-		"EXO Head Office",
-		"EXO Internal Affairs",
+		"NanoTrasen Central Command",
+		"NanoTrasen Logistics",
+		"NanoTrasen Head Office",
+		"NanoTrasen Internal Affairs",
 		"SFP Territory Support",
 		"SFP Special Investigations",
 		"SFP Fugitive Recovery",
