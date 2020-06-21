@@ -3233,7 +3233,6 @@
 #include "frontier\code\modules\species\species.dm"
 #include "frontier\code\modules\species\station\resomi.dm"
 #include "frontier\code\modules\sprite_accessories\accessory_resomi.dm"
-#include "frontier\warfoxy\hair.dm"
 #include "frontier\warfoxy\jukebox.dm"
 #include "frontier\warfoxy\sofa.dm"
 #include "interface\interface.dm"
