@@ -779,8 +779,7 @@
 /area/ship/skrellscoutship/crew/medbay)
 "cS" = (
 /obj/machinery/body_scanconsole{
-	dir = 4;
-	display_tags = list("med_or_display","rob_or_display1","rob_or_display2")
+	dir = 4
 	},
 /turf/simulated/floor/tiled/skrell/white,
 /area/ship/skrellscoutship/crew/medbay)
@@ -803,8 +802,7 @@
 "cY" = (
 /obj/machinery/optable,
 /obj/machinery/body_scan_display{
-	pixel_y = 24;
-	tag = "med_or_display"
+	pixel_y = 24
 	},
 /turf/simulated/floor/tiled/skrell/white,
 /area/ship/skrellscoutship/crew/medbay)
