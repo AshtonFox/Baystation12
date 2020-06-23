@@ -1,0 +1,8 @@
+author: RenardQueenston
+
+delete-after: True
+
+changes:
+  - imageadd: "Добавлены прически 'Shy, Alt', 'One Shoulder, Alt' и 'Bedhead Long, Alt'."
+  - imagedel: "Удалены дубликаты причесок."
+  - tweak: "Прическа 'Fringetail' переименована в 'Tail Bangs'."
