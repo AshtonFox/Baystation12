@@ -540,6 +540,16 @@
 		icon_state = "spidereyes"
 		body_parts = list(BP_HEAD)
 
+	vasseyes
+		name = "Vassilisan Eyes"
+		icon_state = "vasseyes"
+		body_parts = list(BP_HEAD)
+
+	vasseyesalt
+		name = "Vassilisan Eyes (Alt)"
+		icon_state = "vasseyesalt"
+		body_parts = list(BP_HEAD)
+
 	sergaleyes
 		name = "Sergal Eyes"
 		icon_state = "eyes_sergal"
