@@ -5,7 +5,7 @@
 	inventory_shown = FALSE
 	hotkey_ui_hidden = FALSE
 
-/datum/hud/new_player/FinalizeInstantiation(var/ui_style='icons/mob/screen1_White.dmi', var/ui_color = "#ffffff", var/ui_alpha = 255)
+/datum/hud/new_player/FinalizeInstantiation(var/ui_style='icons/mob/screen1_White.dmi', var/ui_color = "#fffffe", var/ui_alpha = 255)
 	adding = list()
 	var/obj/screen/using
 
@@ -103,7 +103,7 @@
 	return ..()
 
 /obj/screen/new_player/selection/MouseEntered(location,control,params) //Yellow color for the font
-	color = "#FFB200"
+	color = "#6cb0e8"
 	return ..()
 
 /obj/screen/new_player/selection/MouseExited(location,control,params)
