@@ -520,6 +520,8 @@
 
 /mob/new_player/proc/close_spawn_windows()
 	close_browser(src, "window=latechoices") //closes late choices window
+	close_browser(src, "window=lobbybrowser")
+	winset(src, "lobbybrowser", "is-disabled=true;is-visible=false")
 	panel.close()
 
 /mob/new_player/proc/check_species_allowed(datum/species/S, var/show_alert=1)

@@ -78,7 +78,8 @@ datum/preferences
 		return
 
 	var/dat = "<html><body><center>"
-
+	if((user.stat == DEAD) && !isghost(user))
+		dat += "<a href='?src=\ref[src];menu=1'>Назад в меню</a> - "
 	if(path)
 		dat += "Slot - "
 		dat += "<a href='?src=\ref[src];load=1'>Load slot</a> - "
@@ -97,7 +98,15 @@ datum/preferences
 	dat += "</html></body>"
 	var/datum/browser/popup = new(user, "Character Setup","Character Setup", 1200, 800, src)
 	popup.set_content(dat)
-	popup.open()
+	if((user.stat == DEAD) && !isghost(user))
+		popup.add_stylesheet("common", 'html/browser/common.css')
+		popup.get_header()
+		popup.get_footer()
+	//popup.open()
+		dat = popup.get_content()
+		winset(user, "lobbybrowser", "is-disabled=false;is-visible=true")
+		show_browser(user, "<meta charset=\"UTF-8\">[dat]", "window=lobbybrowser;can_close=1")
+	else popup.open()
 
 /datum/preferences/proc/process_link(mob/user, list/href_list)
 
@@ -117,7 +126,12 @@ datum/preferences
 	if(..())
 		return 1
 
-	if(href_list["save"])
+	if(href_list["menu"])
+		close_browser(usr, "window=lobbybrowser")
+		onclose(usr, "lobbybrowser", src)
+		winset(usr, "lobbybrowser", "is-disabled=true;is-visible=false")
+		return
+	else if(href_list["save"])
 		save_preferences()
 		save_character()
 	else if(href_list["reload"])
