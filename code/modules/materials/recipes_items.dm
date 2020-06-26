@@ -98,7 +98,7 @@
 /datum/stack_recipe/grenade
 	title = "grenade casing"
 	result_type = /obj/item/weapon/grenade/chem_grenade
-	difficulty = 3
+	difficulty = 2
 
 /datum/stack_recipe/light
 	title = "light fixture frame"

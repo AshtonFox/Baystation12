@@ -501,7 +501,7 @@ var/list/turret_icons
 	if(iscuffed(L)) // If the target is handcuffed, leave it alone
 		return TURRET_NOT_TARGET
 
-	if(isanimal(L) || issmall(L)) // Animals are not so dangerous
+	if(isanimal(L) && L.faction == "hostile") // Only dangerous animals will be attacked. Donnarex edit.
 		return check_anomalies ? TURRET_SECONDARY_TARGET : TURRET_NOT_TARGET
 
 	if(ishuman(L))	//if the target is a human, analyze threat level

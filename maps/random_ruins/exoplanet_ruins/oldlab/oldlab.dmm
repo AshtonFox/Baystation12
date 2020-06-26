@@ -1408,7 +1408,7 @@
 	opacity = 0
 	},
 /obj/effect/paint/black,
-/turf/space,
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/map_template/oldlab/station/xenobio)
 "xg" = (
 /obj/structure/table/steel,
@@ -1520,7 +1520,7 @@
 	opacity = 0
 	},
 /obj/effect/paint/black,
-/turf/space,
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/map_template/oldlab/station/chem)
 "zb" = (
 /obj/structure/cable/yellow{
@@ -1731,8 +1731,7 @@
 /area/map_template/oldlab/station/xenobio)
 "CX" = (
 /obj/machinery/body_scanconsole{
-	dir = 1;
-	display_tags = list("med_or_display","rob_or_display1","rob_or_display2")
+	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -2287,7 +2286,7 @@
 	opacity = 0
 	},
 /obj/effect/paint/black,
-/turf/space,
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/map_template/oldlab/station/xenobio)
 "LW" = (
 /turf/simulated/wall/r_wall/prepainted,
@@ -2743,7 +2742,7 @@
 	opacity = 0
 	},
 /obj/effect/paint/black,
-/turf/space,
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/map_template/oldlab/station/hall)
 "TS" = (
 /turf/simulated/wall/r_wall/prepainted,
