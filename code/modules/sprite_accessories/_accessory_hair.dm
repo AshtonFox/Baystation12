@@ -1134,10 +1134,6 @@
 	icon_state = "hair_80s"
 	flags = HAIR_TIEABLE
 
-/datum/sprite_accessory/hair/veryshortovereyealternate
-	name = "Overeye Very Short, Alternate"
-	icon_state = "hair_veryshortovereyealternate"
-
 /datum/sprite_accessory/hair/wisp
 	name = "Wisp"
 	icon_state = "hair_wisp"
