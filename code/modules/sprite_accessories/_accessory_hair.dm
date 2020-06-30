@@ -739,11 +739,11 @@
 	flags = HAIR_TIEABLE
 
 /datum/sprite_accessory/hair/overeye2
-	name = "Overeye"
+	name = "Overeye Very Short"
 	icon_state = "hair_overeye_veryshort"
 
 /datum/sprite_accessory/hair/overeye3
-	name = "Overeye 2"
+	name = "Overeye Very Short, Alternate"
 	icon_state = "hair_overeye_veryshort_alt"
 
 /datum/sprite_accessory/hair/ponytail7
@@ -1172,7 +1172,3 @@
 	name = "Unkept"
 	icon_state = "hair_unkept"
 	flags = HAIR_TIEABLE
-
-/datum/sprite_accessory/hair/veryshortovereye
-	name = "Overeye Very Short"
-	icon_state = "hair_veryshortovereye"
