@@ -769,6 +769,7 @@
 	icon_state = "bulb1";
 	dir = 4
 	},
+/obj/machinery/pipedispenser,
 /turf/simulated/floor/tiled/techmaint/vox,
 /area/voxship/base)
 "ck" = (

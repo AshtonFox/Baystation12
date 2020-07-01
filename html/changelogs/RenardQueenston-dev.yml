@@ -1,0 +1,8 @@
+author: RenardQueenston
+
+delete-after: True
+
+changes:
+  - tweak: "Хирургам добавлен доступ к MMI."
+  - maptweak: "Добавлен ящик для хранения руды на корабль воксов."
+  - maptweak: "Добавлен раздатчик труб на передовую базу воксов."
