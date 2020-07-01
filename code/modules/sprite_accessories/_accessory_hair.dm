@@ -738,13 +738,17 @@
 	icon_state = "hair_oneshoulder_alt"
 	flags = HAIR_TIEABLE
 
-/datum/sprite_accessory/hair/overeye2
+/datum/sprite_accessory/hair/shorteye2
+	name = "Overeye Shorter"
+	icon_state = "hair_overeye_shorter"
+
+/datum/sprite_accessory/hair/veryshorteye
 	name = "Overeye Very Short"
 	icon_state = "hair_overeye_veryshort"
 
-/datum/sprite_accessory/hair/overeye3
+/datum/sprite_accessory/hair/veryshorteye2
 	name = "Overeye Very Short, Alternate"
-	icon_state = "hair_veryshortovereye"
+	icon_state = "hair_overeye_veryshort_alt"
 
 /datum/sprite_accessory/hair/ponytail7
 	name = "Ponytail 7"
