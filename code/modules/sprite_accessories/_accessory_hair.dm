@@ -744,7 +744,7 @@
 
 /datum/sprite_accessory/hair/overeye3
 	name = "Overeye Very Short, Alternate"
-	icon_state = "hair_overeye_veryshort_alt"
+	icon_state = "hair_veryshortovereye"
 
 /datum/sprite_accessory/hair/ponytail7
 	name = "Ponytail 7"
