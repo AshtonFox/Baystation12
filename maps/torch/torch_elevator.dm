@@ -32,15 +32,6 @@
 	icon_screen = "lift"
 	density = 0
 
-/obj/machinery/computer/shuttle_control/lift/medical
-	name = "medical lift controls"
-	shuttle_tag = "Medical Lift"
-	ui_template = "shuttle_control_console_lift.tmpl"
-	icon_state = "tiny"
-	icon_keyboard = "tiny_keyboard"
-	icon_screen = "lift"
-	density = 0
-
 /datum/shuttle/autodock/ferry/cargo_lift
 	name = "Primary Cargo Lift"
 	shuttle_area = /area/turbolift/cargo_lift
@@ -58,17 +49,6 @@
 	warmup_time = 3
 	waypoint_station = "nav_robotics_lift_top"
 	waypoint_offsite = "nav_robotics_lift_bottom"
-	sound_takeoff = 'sound/effects/lift_heavy_start.ogg'
-	sound_landing = 'sound/effects/lift_heavy_stop.ogg'
-	ceiling_type = null
-	knockdown = 0
-
-/datum/shuttle/autodock/ferry/medical_lift
-	name = "Medical Lift"
-	shuttle_area = /area/turbolift/medical_lift
-	warmup_time = 3
-	waypoint_station = "nav_medical_lift_top"
-	waypoint_offsite = "nav_medical_lift_bottom"
 	sound_takeoff = 'sound/effects/lift_heavy_start.ogg'
 	sound_landing = 'sound/effects/lift_heavy_stop.ogg'
 	ceiling_type = null
@@ -97,18 +77,5 @@
 	name = "Lower Deck"
 	landmark_tag = "nav_robotics_lift_bottom"
 	flags = SLANDMARK_FLAG_AUTOSET
-	base_area = /area/assembly/robotics/
-	base_turf = /turf/simulated/floor/plating
-
-/obj/effect/shuttle_landmark/lift/medical_top
-	name = "Top Deck"
-	landmark_tag = "nav_medical_lift_top"
-	base_area = /area/medical/foyer/storeroom
-	base_turf = /turf/simulated/open
-
-/obj/effect/shuttle_landmark/lift/medical_bottom
-	name = "Lower Deck"
-	landmark_tag = "nav_medical_lift_bottom"
-	flags = SLANDMARK_FLAG_AUTOSET
-	base_area = /area/medical/morgue
+	base_area = /area/assembly/robotics/lower
 	base_turf = /turf/simulated/floor/plating
