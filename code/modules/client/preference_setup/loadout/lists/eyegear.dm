@@ -60,6 +60,14 @@
 	display_name = "Medical HUD, prescription"
 	path = /obj/item/clothing/glasses/hud/health/prescription
 
+/datum/gear/eyes/medical/aviator
+	display_name = "Medical HUD Aviators"
+	path = /obj/item/clothing/glasses/hud/health/aviator
+
+/datum/gear/eyes/medical/aviator/prescription
+	display_name = "Medical HUD Aviators, presciption"
+	path = /obj/item/clothing/glasses/hud/health/aviator/prescription
+
 /datum/gear/eyes/medical/visor
 	display_name = "Medical HUD, Visor"
 	path = /obj/item/clothing/glasses/hud/health/visor
@@ -78,6 +86,14 @@
 /datum/gear/eyes/meson/prescription
 	display_name = "Meson Goggles, prescription"
 	path = /obj/item/clothing/glasses/meson/prescription
+
+/datum/gear/eyes/meson/aviator
+	display_name = "Meson Aviators"
+	path = /obj/item/clothing/glasses/meson/aviator
+
+/datum/gear/eyes/meson/aviator/prescription
+	display_name = "Meson Aviators, presciption"
+	path = /obj/item/clothing/glasses/meson/aviator/prescription
 
 /datum/gear/eyes/meson/ipatch
 	display_name = "HUDpatch, Meson"
