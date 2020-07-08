@@ -452,6 +452,14 @@
 	desc = "A sturdy backpack worn over one shoulder."
 	icon_state = "courierbag"
 
+/obj/item/weapon/storage/backpack/messenger/grey
+	name = "grey messenger bag"
+
+/obj/item/weapon/storage/backpack/messenger/black
+	name = "black messenger bag"
+	desc = "A sturdy backpack worn over one shoulder. This one is coloured black."
+	icon_state = "courierbagblk"
+
 /obj/item/weapon/storage/backpack/messenger/chem
 	name = "pharmacy messenger bag"
 	desc = "A serile backpack worn over one shoulder.  This one is in Chemsitry colors."
@@ -496,4 +504,3 @@
 	name = "corporate security messenger bag"
 	desc = "A tactical backpack worn over one shoulder. This is black and bottle green."
 	icon_state = "courierbagsec_exo"
-
