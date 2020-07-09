@@ -22,7 +22,7 @@
 	icon_keyboard = "tiny_keyboard"
 	icon_screen = "lift"
 	density = 0
-	
+
 /obj/machinery/computer/shuttle_control/lift/robotics
 	name = "robotics lift controls"
 	shuttle_tag = "Robotics Lift"
@@ -42,7 +42,7 @@
 	sound_landing = 'sound/effects/lift_heavy_stop.ogg'
 	ceiling_type = null
 	knockdown = 0
-	
+
 /datum/shuttle/autodock/ferry/robotics_lift
 	name = "Robotics Lift"
 	shuttle_area = /area/turbolift/robotics_lift
@@ -66,7 +66,7 @@
 	flags = SLANDMARK_FLAG_AUTOSET
 	base_area = /area/quartermaster/storage
 	base_turf = /turf/simulated/floor/plating
-	
+
 /obj/effect/shuttle_landmark/lift/robotics_top
 	name = "Top Deck"
 	landmark_tag = "nav_robotics_lift_top"

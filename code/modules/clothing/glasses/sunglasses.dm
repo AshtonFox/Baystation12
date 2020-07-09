@@ -31,7 +31,7 @@
 	icon_state = "goggles"
 
 /obj/item/clothing/glasses/sunglasses/sechud/toggle
-	name = "HUD aviators"
+	name = "security HUD aviators"
 	desc = "Modified aviator glasses that can be switched between HUD and darkened modes."
 	icon_state = "sec_hud"
 	off_state = "sec_flash"

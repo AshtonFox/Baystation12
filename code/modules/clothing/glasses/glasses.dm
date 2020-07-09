@@ -111,6 +111,34 @@
 	desc = "Optical meson scanner with prescription lenses."
 	prescription = 6
 
+/obj/item/clothing/glasses/meson/aviator
+	name = "engineering aviators"
+	desc = "Modified aviator glasses with a toggled meson scanner."
+	icon_state = "aviator_eng"
+	off_state = "aviator"
+	item_state_slots = list(slot_r_hand_str = "sunglasses", slot_l_hand_str = "sunglasses")
+	activation_sound = 'sound/effects/pop.ogg'
+
+/obj/item/clothing/glasses/meson/aviator/prescription
+	name = "prescription engineering aviators"
+	desc = "Modified aviator glasses with a toggled meson scanner. Comes with bonus prescription lenses."
+	prescription = 1
+
+/obj/item/clothing/glasses/hud/health/aviator
+	name = "medical HUD aviators"
+	desc = "Modified aviator glasses with a toggled health HUD."
+	icon_state = "aviator_med"
+	off_state = "aviator"
+	item_state_slots = list(slot_r_hand_str = "sunglasses", slot_l_hand_str = "sunglasses")
+	action_button_name = "Toggle HUD"
+	toggleable = TRUE
+	activation_sound = 'sound/effects/pop.ogg'
+
+/obj/item/clothing/glasses/hud/health/aviator/prescription
+	name = "prescription medical HUD aviators"
+	desc = "Modified aviator glasses with a toggled health HUD. Comes with bonus prescription lenses."
+	prescription = 6
+
 /obj/item/clothing/glasses/science
 	name = "science goggles"
 	desc = "Goggles fitted with a portable analyzer capable of determining the fabricator training potential of an item or components of a machine. Sensitive to EMP."

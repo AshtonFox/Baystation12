@@ -2819,6 +2819,10 @@
 /obj/machinery/atmospherics/pipe/vent/high_volume,
 /turf/simulated/floor/airless,
 /area/voxship/engineering)
+"gr" = (
+/obj/structure/ore_box,
+/turf/simulated/floor/tiled/techmaint/vox,
+/area/voxship/scavship)
 "gs" = (
 /obj/random/loot,
 /turf/simulated/floor/airless,
@@ -8715,7 +8719,7 @@ as
 dD
 ed
 ez
-aN
+gr
 aa
 aa
 dV

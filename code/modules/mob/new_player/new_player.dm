@@ -64,6 +64,7 @@
 
 
 		observer.started_as_observer = TRUE
+		close_spawn_windows()
 		var/obj/O = locate("landmark*Observer-Start")
 		if(istype(O))
 			to_chat(src, "<span class='notice'>Now teleporting.</span>")
@@ -384,6 +385,7 @@
 
 /mob/new_player/proc/create_character(var/turf/spawn_turf)
 	spawning = 1
+	close_spawn_windows()
 
 	var/mob/living/carbon/human/new_character
 

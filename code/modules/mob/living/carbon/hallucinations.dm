@@ -154,9 +154,9 @@
 			if(!names.len)
 				names += holder.real_name
 			var/add = prob(20) ? ", [pick(names)]" : ""
-			var/list/phrases = list("[prob(50) ? "Hey, " : ""][pick(names)]!","[prob(50) ? "Hey, " : ""][pick(names)]?","Get out[add]!","Go away[add].","What are you doing[add]?","Where's your ID[add]?")
+			var/list/phrases = list("[prob(50) ? "Эй, " : ""][pick(names)]!","[prob(50) ? "Эй, " : ""][pick(names)]?","Убирайся[add]!","Уходи[add].","Что ты делаешь[add]?","Где твоя карта[add]?")
 			if(holder.hallucination_power > 50)
-				phrases += list("What did you come here for[add]?","Don't touch me[add].","You're not getting out of here[add].", "You are a failure, [pick(names)].","Just kill yourself already, [pick(names)].","Put on some clothes[add].","Take off your clothes[add].")
+				phrases += list("Зачем ты сюда пришел[add]?","Не трогай меня[add].","Тебе отсюда не выбраться[add].", "Ты сплошное разочарование, [pick(names)].","Просто убей уже себя, [pick(names)].","Оденься[add].","Сними свою одежду[add].")
 			message = pick(phrases)
 			to_chat(holder,"<span class='game say'><span class='name'>[talker.name]</span> [holder.say_quote(message)], <span class='message'><span class='body'>\"[message]\"</span></span></span>")
 		else

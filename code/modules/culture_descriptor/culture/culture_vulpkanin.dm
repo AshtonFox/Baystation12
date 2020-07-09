@@ -27,6 +27,7 @@
 	name = CULTURE_VULP_SOL
 	description = "These are the immigrant Vulpkanin populations of Sol, who have grown large and gone through several generations over the past eighty years. Due to the fact they live among Human races and other species, many of them have begun to forget their culture and native language as they assimilate with Humans. They are often called Germanic names, which is due to the similarity of Germanic languages to Canilunzt."
 	language = LANGUAGE_HUMAN_EURO
+	name_language = LANGUAGE_HUMAN_EURO
 	secondary_langs = list(
 		LANGUAGE_HUMAN_SELENIAN,
 		LANGUAGE_SIGN,
