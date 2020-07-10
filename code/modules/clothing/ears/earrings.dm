@@ -4,7 +4,9 @@
 	desc = "An earring of some kind."
 	icon = 'icons/obj/clothing/obj_ears.dmi'
 	gender = PLURAL
-	species_restricted = list(SPECIES_HUMAN, SPECIES_HUMAN2, SPECIES_CUSTOM, SPECIES_VULP, SPECIES_PROMETHEAN)
+	species_restricted = list(SPECIES_HUMAN, SPECIES_HUMAN2, SPECIES_CUSTOM, SPECIES_VULP, SPECIES_PROMETHEAN, SPECIES_TAJ)
+	sprite_sheets = list(
+		SPECIES_TAJ = 'icons/mob/species/tajaran/onmob_ears_tajaran.dmi')
 
 /obj/item/clothing/ears/earring/stud
 	name = "pearl stud earrings"
