@@ -958,6 +958,10 @@
 	name = "Tajaran Finger Curls"
 	icon_state = "hair_fingerwave"
 
+/datum/sprite_accessory/hair/taj_ears_long
+	name = "Tajaran Ears, Long"
+	icon_state = "ears_long"
+
 /datum/sprite_accessory/hair/skr_tentacle_veryshort
 	name = "Skrell Very Short Tentacles"
 	icon_state = "skrell_hair_veryshort"
