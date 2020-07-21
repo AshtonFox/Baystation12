@@ -1,8 +1,8 @@
 /datum/gear/uniform/pmc
-	display_name = "PMC uniform selection"
+	display_name = "private military uniform selection"
 	description = "Selection of uniforms provided by private military companies."
 	path = /obj/item/clothing/under
-	allowed_roles = list(/datum/job/hos, /datum/job/warden, /datum/job/detective, /datum/job/officer)
+	allowed_branches = list(/datum/mil_branch/civilian)
 
 /datum/gear/uniform/pmc/New()
 	..()
