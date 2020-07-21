@@ -15,7 +15,7 @@
 	display_name = "corporate security officer beret"
 	path = /obj/item/clothing/head/beret/sec/corporate/officer
 	description = "A beret with an officer's rank emblem. For officers that are more inclined towards style than safety."
-	allowed_roles = /datum/job/officer
+	allowed_roles = list(/datum/job/officer)
 	flags = null
 
 /datum/gear/head/beret/sec/officer/New()
@@ -29,7 +29,7 @@
 	display_name = "corporate security warden beret"
 	path = /obj/item/clothing/head/beret/sec/corporate/officer
 	description = "A beret with a warden's rank emblem. For officers that are more inclined towards style than safety."
-	allowed_roles = /datum/job/warden
+	allowed_roles = list(/datum/job/warden)
 	flags = null
 
 /datum/gear/head/beret/sec/warden/New()
@@ -43,7 +43,7 @@
 	display_name = "corporate security commander beret"
 	path = /obj/item/clothing/head/beret/sec/corporate/officer
 	description = "A beret with a commander's rank emblem. For officers that are more inclined towards style than safety."
-	allowed_roles = /datum/job/hos
+	allowed_roles = list(/datum/job/hos)
 	flags = null
 
 /datum/gear/head/beret/sec/hos/New()
