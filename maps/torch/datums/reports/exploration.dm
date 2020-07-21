@@ -1,10 +1,10 @@
 /datum/computer_file/report/recipient/exp
 	logo = "\[logo\]"
 
-	/datum/computer_file/report/recipient/exp/New()
-		..()
-		set_access(access_pathfinder, access_pathfinder)
-		set_access(access_heads, override = 0)
+/datum/computer_file/report/recipient/exp/New()
+	..()
+	set_access(access_pathfinder, access_pathfinder)
+	set_access(access_heads, override = 0)
 
 /datum/computer_file/report/recipient/exp/fauna
 	form_name = "NT-EXP-19f"
