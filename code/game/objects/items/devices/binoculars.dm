@@ -12,6 +12,7 @@
 	throw_range = 15
 	throw_speed = 3
 
+	matter = list(MATERIAL_STEEL = 2000, MATERIAL_GLASS = 3000)
 
 /obj/item/device/binoculars/attack_self(mob/user)
 	if(zoom)
