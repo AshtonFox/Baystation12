@@ -16,7 +16,7 @@
 	                    SKILL_FINANCE		= SKILL_BASIC)
 	skill_points = 20
 	access = list(access_liaison, access_bridge, access_solgov_crew,
-						access_nanotrasen, access_commissary)
+						access_nanotrasen, access_commissary, access_torch_fax)
 	software_on_spawn = list(/datum/computer_file/program/reports)
 
 /datum/job/liaison/get_description_blurb()

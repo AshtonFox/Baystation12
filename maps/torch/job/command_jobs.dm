@@ -329,7 +329,7 @@
 		                   SKILL_FORENSICS   = SKILL_MAX)
 	skill_points = 20
 	access = list(access_security, access_medical,
-			            access_bridge, access_cargo, access_solgov_crew, access_hangar, access_sec_guard)
+			            access_bridge, access_cargo, access_solgov_crew, access_hangar, access_sec_guard, access_torch_fax)
 	//defer_roundstart_spawn = TRUE
 /*
 /datum/job/bodyguard/is_position_available()

@@ -168,7 +168,7 @@
 	path = /obj/item/clothing/mask/balaclava
 
 /datum/gear/head/corporateberet
-	display_name = "corporate beret selection"
+	display_name = "private military beret selection"
 	path = /obj/item/clothing/head/beret
 
 /datum/gear/head/corporateberet/New()
