@@ -153,3 +153,40 @@
 	path = /obj/item/clothing/mask/gas/vox
 	sort_category = "Xenowear"
 
+// Vulp Earrings
+/datum/gear/ears/earring/vulpkanin/stud
+	display_name = "earrings stud (Vulpkanin)"
+	path = /obj/item/clothing/ears/earring/vulpkanin/stud
+	sort_category = "Xenowear"
+
+/datum/gear/ears/earring/vulpkanin/stud/New()
+	..()
+	gear_tweaks += new/datum/gear_tweak/path/specified_types_list(typesof(/obj/item/clothing/ears/earring/vulpkanin/stud))
+
+/datum/gear/ears/earring/vulpkanin/dangle
+	display_name = "earrings dangle (Vulpkanin)"
+	path = /obj/item/clothing/ears/earring/vulpkanin/dangle
+	sort_category = "Xenowear"
+
+/datum/gear/ears/earring/vulpkanin/dangle/New()
+	..()
+	gear_tweaks += new/datum/gear_tweak/path/specified_types_list(typesof(/obj/item/clothing/ears/earring/vulpkanin/dangle))
+
+// Tajaran Earrings
+/datum/gear/ears/earring/tajaran/stud
+	display_name = "earrings stud (Tajaran)"
+	path = /obj/item/clothing/ears/earring/tajaran/stud
+	sort_category = "Xenowear"
+
+/datum/gear/ears/earring/tajaran/stud/New()
+	..()
+	gear_tweaks += new/datum/gear_tweak/path/specified_types_list(typesof(/obj/item/clothing/ears/earring/tajaran/stud))
+
+/datum/gear/ears/earring/tajaran/dangle
+	display_name = "earrings dangle (Tajaran)"
+	path = /obj/item/clothing/ears/earring/tajaran/dangle
+	sort_category = "Xenowear"
+
+/datum/gear/ears/earring/tajaran/dangle/New()
+	..()
+	gear_tweaks += new/datum/gear_tweak/path/specified_types_list(typesof(/obj/item/clothing/ears/earring/tajaran/dangle))

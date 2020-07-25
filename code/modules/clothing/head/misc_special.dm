@@ -32,6 +32,9 @@
 	var/base_state
 	flash_protection = FLASH_PROTECTION_MAJOR
 	tint = TINT_HEAVY
+	sprite_sheets= list(
+		SPECIES_VULP = 'icons/mob/species/vulpkanin/onmob_head_helmet_vulpkanin.dmi',
+		SPECIES_TAJ = 'icons/mob/species/tajaran/onmob_head_helmet_tajaran.dmi')
 
 /obj/item/clothing/head/welding/attack_self()
 	if(!base_state)

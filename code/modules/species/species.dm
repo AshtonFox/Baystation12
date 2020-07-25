@@ -404,7 +404,7 @@ The slots that you can use are found in items_clothing.dm and are the inventory 
 
 	H.sync_organ_dna()
 
-/datum/species/proc/hug(var/mob/living/carbon/human/H,var/mob/living/target)
+/datum/species/proc/hug(var/mob/living/carbon/human/H,var/mob/living/carbon/human/target)
 
 	var/t_him = "them"
 	switch(target.gender)
@@ -413,8 +413,16 @@ The slots that you can use are found in items_clothing.dm and are the inventory 
 		if(FEMALE)
 			t_him = "her"
 
-	H.visible_message("<span class='notice'>[H] hugs [target] to make [t_him] feel better!</span>", \
-					"<span class='notice'>You hug [target] to make [t_him] feel better!</span>")
+	var/O = H.zone_sel.selecting
+	if(O == BP_HEAD && target.has_organ(BP_HEAD))
+		H.visible_message("<span class='notice'>[H] pats [target] on the head.</span>", \
+						"<span class='notice'>You pat [target] on the head.</span>")
+	else if((O == BP_R_HAND || O == BP_L_HAND) && (target.has_organ(BP_R_HAND) || target.has_organ(BP_L_HAND)))
+		H.visible_message("<span class='notice'>[H] shakes [target]'s hand.</span>", \
+						"<span class='notice'>You shake [target]'s hand.</span>")
+	else
+		H.visible_message("<span class='notice'>[H] hugs [target] to make [t_him] feel better!</span>", \
+						"<span class='notice'>You hug [target] to make [t_him] feel better!</span>")
 
 	if(H != target)
 		H.update_personal_goal(/datum/goal/achievement/givehug, TRUE)
@@ -777,8 +785,9 @@ The slots that you can use are found in items_clothing.dm and are the inventory 
 					dat += "</br><b>Vulnerable to [kind].</b>"
 				else if(damage_types[kind] < 1)
 					dat += "</br><b>Resistant to [kind].</b>"
-			dat += "</br><b>They breathe [gas_data.name[breath_type]].</b>"
-			dat += "</br><b>They exhale [gas_data.name[exhale_type]].</b>"
+			if(has_organ[breathing_organ])
+				dat += "</br><b>They breathe [gas_data.name[breath_type]].</b>"
+				dat += "</br><b>They exhale [gas_data.name[exhale_type]].</b>"
 			if(LAZYLEN(poison_types))
 				dat += "</br><b>[capitalize(english_list(poison_types))] [LAZYLEN(poison_types) == 1 ? "is" : "are"] poisonous to them.</b>"
 			dat += "</small>"

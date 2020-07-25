@@ -42,7 +42,6 @@
 	#include "datums/supplypacks/security.dm"
 	#include "datums/supplypacks/science.dm"
 	#include "datums/department_exploration.dm"
-	#include "datums/game_modes/torch_revolution.dm"
 
 	#include "game/antagonist/outsider/deathsquad.dm"
 	#include "game/antagonist/outsider/ert.dm"
@@ -113,6 +112,7 @@
 	#include "language/human/misc/spacer.dm"
 
 	#include "machinery/apc_shuttle.dm"
+	#include "machinery/faxmachine.dm"
 	#include "machinery/keycard authentication.dm"
 	#include "machinery/suit_storage.dm"
 
