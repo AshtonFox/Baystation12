@@ -10,10 +10,10 @@
 	var/shield_power_cost = 1000
 	var/obj/aura/personal_shield/device/shield
 
-	VAR_PRIVATE/currently_stored_power = 0
-	VAR_PRIVATE/max_stored_power = 3000
-	VAR_PRIVATE/restored_power_per_tick = 5
-	VAR_PRIVATE/enable_when_powered = FALSE
+	var/currently_stored_power = 0
+	var/max_stored_power = 3000
+	var/restored_power_per_tick = 5
+	var/enable_when_powered = FALSE
 
 /obj/item/device/personal_shield/Initialize()
 	. = ..()
@@ -66,7 +66,7 @@
 	if(open)
 		if(power_cell)
 			to_chat(user, SPAN_NOTICE("You remove \the [power_cell] from \the [src]."))
-			turn_off()	
+			turn_off()
 			user.put_in_hands(power_cell)
 			power_cell = null
 			currently_stored_power = 0
@@ -135,7 +135,7 @@
 
 	currently_stored_power -= shield_power_cost
 	START_PROCESSING(SSobj, src)
-	
+
 	if(currently_stored_power < shield_power_cost)
 		enable_when_powered = TRUE
 		return FALSE
