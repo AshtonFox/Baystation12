@@ -10,6 +10,9 @@
 /datum/fabricator_recipe/extinguisher
 	path = /obj/item/weapon/extinguisher/empty
 
+/datum/fabricator_recipe/extinguisher/mini
+	path = /obj/item/weapon/extinguisher/mini/empty
+
 /datum/fabricator_recipe/jar
 	path = /obj/item/glass_jar
 
@@ -92,3 +95,6 @@
 
 /datum/fabricator_recipe/binoculars
 	path = /obj/item/device/binoculars
+
+/datum/fabricator_recipe/toolbox
+	path = /obj/item/weapon/storage/toolbox

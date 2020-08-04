@@ -248,7 +248,7 @@
 		var/obj/machinery/power/apc/A = target
 		if(A.components_are_accessible(/obj/item/weapon/stock_parts/power/battery))
 			var/obj/item/weapon/stock_parts/power/battery/bat = A.get_component_of_type(/obj/item/weapon/stock_parts/power/battery)
-			var/obj/item/weapon/cell/cell = bat.extract_cell(src)
+			var/obj/item/weapon/cell/cell = bat.extract_cell(user)
 			if(cell)
 				wrapped = cell
 				cell.forceMove(src)
@@ -335,7 +335,7 @@
 
 			to_chat(D, "<span class='danger'>You begin decompiling [M].</span>")
 
-			if(!do_after(D,50,M))
+			if(do_after(D,50,M))
 				to_chat(D, "<span class='danger'>You need to remain still while decompiling such a large object.</span>")
 				return
 

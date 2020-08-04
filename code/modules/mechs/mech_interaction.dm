@@ -208,7 +208,7 @@
 		for(var/hardpoint in hardpoints)
 			if(hardpoint != selected_hardpoint)
 				continue
-			var/obj/screen/movable/exosuit/hardpoint/H = hardpoint_hud_elements[hardpoint]
+			var/obj/screen/exosuit/hardpoint/H = hardpoint_hud_elements[hardpoint]
 			if(istype(H))
 				H.icon_state = "hardpoint"
 				break
@@ -235,7 +235,7 @@
 	if(!check_enter(user))
 		return
 	to_chat(user, SPAN_NOTICE("You start climbing into \the [src]..."))
-	if(!body || !do_after(user, body.climb_time))
+	if(!body || do_after(user, body.climb_time))
 		return
 	if(!body)
 		return
@@ -347,7 +347,7 @@
 
 				visible_message(SPAN_WARNING("\The [user] begins unwrenching the securing bolts holding \the [src] together."))
 				var/delay = 60 * user.skill_delay_mult(SKILL_DEVICES)
-				if(!do_after(user, delay) || !maintenance_protocols)
+				if(do_after(user, delay) || !maintenance_protocols)
 					return
 				visible_message(SPAN_NOTICE("\The [user] loosens and removes the securing bolts, dismantling \the [src]."))
 				dismantle()
@@ -382,7 +382,7 @@
 					to_chat(user, SPAN_WARNING("There is no cell here for you to remove!"))
 					return
 				var/delay = 20 * user.skill_delay_mult(SKILL_DEVICES)
-				if(!do_after(user, delay) || !maintenance_protocols || !body || !body.cell)
+				if(do_after(user, delay) || !maintenance_protocols || !body || !body.cell)
 					return
 
 				user.put_in_hands(body.cell)
@@ -406,6 +406,12 @@
 					playsound(user.loc, 'sound/items/Screwdriver.ogg', 50, 1)
 					visible_message(SPAN_NOTICE("\The [user] installs \the [body.cell] into \the [src]."))
 				return
+			else if(istype(thing, /obj/item/device/robotanalyzer))
+				to_chat(user, SPAN_NOTICE("Diagnostic Report for \the [src]:"))
+				for(var/obj/item/mech_component/MC in list(arms, legs, body, head))
+					if(MC)
+						MC.return_diagnostics(user)
+				return
 	return ..()
 
 /mob/living/exosuit/attack_hand(var/mob/user)
@@ -416,7 +422,7 @@
 		else if(!hatch_closed)
 			var/mob/pilot = pick(pilots)
 			user.visible_message(SPAN_DANGER("\The [user] is trying to pull \the [pilot] out of \the [src]!"))
-			if(do_after(user, 30) && user.Adjacent(src) && (pilot in pilots) && !hatch_closed)
+			if(!do_after(user, 30) && user.Adjacent(src) && (pilot in pilots) && !hatch_closed)
 				user.visible_message(SPAN_DANGER("\The [user] drags \the [pilot] out of \the [src]!"))
 				eject(pilot, silent=1)
 		return

@@ -436,7 +436,7 @@ GLOBAL_LIST_INIT(global_apc_list,list())
 	if(istype(W, /obj/item/inducer))
 		return FALSE // inducer.dm afterattack handles this
 
-	if(isCrowbar(W))
+	if(isCrowbar(W) && user.a_intent != I_HURT)//bypass when on harm intend to actually make use of the cover hammer off check further down.
 		if(opened) // Closes or removes board.
 			if (has_electronics == 1)
 				if (terminal())
@@ -445,7 +445,7 @@ GLOBAL_LIST_INIT(global_apc_list,list())
 				playsound(src.loc, 'sound/items/Crowbar.ogg', 50, 1)
 				to_chat(user, "You are trying to remove the power control board...")//lpeters - fixed grammar issues
 
-				if(do_after(user, 50, src) && opened && (has_electronics == 1) && !terminal()) // redo all checks.
+				if(!do_after(user, 50, src) && opened && (has_electronics == 1) && !terminal()) // redo all checks.
 					has_electronics = 0
 					if ((stat & BROKEN))
 						user.visible_message(\
@@ -542,7 +542,7 @@ GLOBAL_LIST_INIT(global_apc_list,list())
 		user.visible_message(SPAN_WARNING("\The [user] inserts the power control board into \the [src]."), \
 							"You start to insert the power control board into the frame...")
 		playsound(src.loc, 'sound/items/Deconstruct.ogg', 50, 1)
-		if(do_after(user, 10, src) && has_electronics == 0 && opened && !(stat & BROKEN))
+		if(!do_after(user, 10, src) && has_electronics == 0 && opened && !(stat & BROKEN))
 			has_electronics = 1
 			reboot() //completely new electronics
 			to_chat(user, SPAN_NOTICE("You place the power control board inside the frame."))
@@ -567,7 +567,7 @@ GLOBAL_LIST_INIT(global_apc_list,list())
 							"You start welding the APC frame...", \
 							"You hear welding.")
 		playsound(src.loc, 'sound/items/Welder.ogg', 50, 1)
-		if(do_after(user, 50, src) && opened && has_electronics == 0 && !terminal())
+		if(!do_after(user, 50, src) && opened && has_electronics == 0 && !terminal())
 			if(!WT.remove_fuel(3, user))
 				return TRUE
 			if (emagged || (stat & BROKEN) || opened==2)
@@ -608,7 +608,7 @@ GLOBAL_LIST_INIT(global_apc_list,list())
 
 			user.visible_message("<span class='warning'>[user.name] replaces the damaged APC frame with a new one.</span>",\
 								"You begin to replace the damaged APC frame...")
-			if(do_after(user, 50, src) && opened && !has_electronics && ((stat & BROKEN) || (hacker && !hacker.hacked_apcs_hidden)))
+			if(!do_after(user, 50, src) && opened && !has_electronics && ((stat & BROKEN) || (hacker && !hacker.hacked_apcs_hidden)))
 				user.visible_message(\
 					"<span class='notice'>[user.name] has replaced the damaged APC frame with new one.</span>",\
 					"You replace the damaged APC frame with new one.")
@@ -629,7 +629,7 @@ GLOBAL_LIST_INIT(global_apc_list,list())
 			&& !opened \
 			&& W.force >= 5 \
 			&& W.w_class >= 3.0 \
-			&& prob(20) )
+			&& prob(W.force) )
 		opened = 2
 		user.visible_message("<span class='danger'>The APC cover was knocked down with the [W.name] by [user.name]!</span>", \
 			"<span class='danger'>You knock down the APC cover with your [W.name]!</span>", \
@@ -671,7 +671,7 @@ GLOBAL_LIST_INIT(global_apc_list,list())
 			to_chat(user, "Nothing happens.")
 		else
 			flick("apc-spark", src)
-			if (do_after(user,6,src))
+			if (!do_after(user,6,src))
 				if(prob(50))
 					emagged = 1
 					req_access.Cut()

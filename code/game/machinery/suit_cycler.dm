@@ -99,7 +99,7 @@
 
 		visible_message("<span class='notice'>[user] starts putting [G.affecting.name] into the suit cycler.</span>", range = 3)
 
-		if(do_after(user, 20, src))
+		if(!do_after(user, 20, src))
 			if(!G || !G.affecting) return
 			var/mob/M = G.affecting
 			if (M.client)
@@ -335,7 +335,7 @@
 
 /obj/machinery/suit_cycler/proc/finished_job()
 	var/turf/T = get_turf(src)
-	T.visible_message("[icon2html(src, viewers(src))]<span class='notice'>\The [src] pings loudly.</span>")
+	T.visible_message("[icon2html(src, viewers(get_turf(src)))]<span class='notice'>\The [src] pings loudly.</span>")
 	active = 0
 	updateUsrDialog()
 

@@ -69,6 +69,7 @@
 
 	utility_extra = list(/obj/item/clothing/under/solgov/utility/fleet/officer/command,
 						 /obj/item/clothing/head/beret/solgov/fleet/command,
+						 /obj/item/clothing/head/beret/solgov/fleet/engineering,
 						 /obj/item/clothing/head/ushanka/solgov/fleet,
 						 /obj/item/clothing/suit/storage/hooded/wintercoat/solgov/fleet,
 						 /obj/item/clothing/head/soft/solgov/fleet,
@@ -135,6 +136,7 @@
 
 	utility_extra = list(/obj/item/clothing/under/solgov/utility/fleet/officer/command,
 						 /obj/item/clothing/head/beret/solgov/fleet/command,
+						 /obj/item/clothing/head/beret/solgov/fleet/security,
 						 /obj/item/clothing/head/ushanka/solgov/fleet,
 						 /obj/item/clothing/suit/storage/hooded/wintercoat/solgov/fleet,
 						 /obj/item/clothing/head/soft/solgov/fleet,
@@ -201,6 +203,7 @@
 
 	utility_extra = list(/obj/item/clothing/under/solgov/utility/fleet/officer/command,
 						 /obj/item/clothing/head/beret/solgov/fleet/command,
+						 /obj/item/clothing/head/beret/solgov/fleet/medical,
 						 /obj/item/clothing/head/ushanka/solgov/fleet,
 						 /obj/item/clothing/suit/storage/hooded/wintercoat/solgov/fleet,
 						 /obj/item/clothing/head/soft/solgov/fleet,
@@ -266,6 +269,7 @@
 
 	utility_extra = list(/obj/item/clothing/under/solgov/utility/fleet/officer/command,
 						 /obj/item/clothing/head/beret/solgov/fleet/command,
+						 /obj/item/clothing/head/beret/solgov/fleet/supply,
 						 /obj/item/clothing/head/ushanka/solgov/fleet,
 						 /obj/item/clothing/suit/storage/hooded/wintercoat/solgov/fleet,
 						 /obj/item/clothing/head/soft/solgov/fleet,
@@ -342,6 +346,7 @@
 
 	utility_extra = list(/obj/item/clothing/under/solgov/utility/fleet/officer/command,
 						 /obj/item/clothing/head/beret/solgov/fleet/command,
+						 /obj/item/clothing/head/beret/solgov/fleet/service,
 						 /obj/item/clothing/head/ushanka/solgov/fleet,
 						 /obj/item/clothing/suit/storage/hooded/wintercoat/solgov/fleet,
 						 /obj/item/clothing/head/soft/solgov/fleet,
@@ -390,6 +395,7 @@
 
 	utility_extra = list(/obj/item/clothing/under/solgov/utility/fleet/officer/command,
 						 /obj/item/clothing/head/beret/solgov/fleet/command,
+						 /obj/item/clothing/head/beret/solgov/fleet/exploration,
 						 /obj/item/clothing/head/ushanka/solgov/fleet,
 						 /obj/item/clothing/suit/storage/hooded/wintercoat/solgov/fleet,
 						 /obj/item/clothing/head/soft/solgov/fleet,
