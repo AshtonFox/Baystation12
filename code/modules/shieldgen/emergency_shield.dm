@@ -261,13 +261,13 @@
 		return TRUE
 
 	if (src.active)
-		user.visible_message("<span class='notice'>[icon2html(src, viewers(src))] [user] deactivated the shield generator.</span>", \
+		user.visible_message("<span class='notice'>[icon2html(src, viewers(get_turf(src)))] [user] deactivated the shield generator.</span>", \
 			"<span class='notice'>[icon2html(src,user)] You deactivate the shield generator.</span>", \
 			"You hear heavy droning fade out.")
 		src.shields_down()
 	else
 		if(anchored)
-			user.visible_message("<span class='notice'>[icon2html(src, viewers(src))] [user] activated the shield generator.</span>", \
+			user.visible_message("<span class='notice'>[icon2html(src, viewers(get_turf(src)))] [user] activated the shield generator.</span>", \
 				"<span class='notice'>[icon2html(src, user)] You activate the shield generator.</span>", \
 				"You hear heavy droning.")
 			src.shields_up()
@@ -294,8 +294,8 @@
 	else if(isCoil(W) && malfunction && is_open)
 		var/obj/item/stack/cable_coil/coil = W
 		to_chat(user, "<span class='notice'>You begin to replace the wires.</span>")
-		//if(do_after(user, min(60, round( ((maxhealth/health)*10)+(malfunction*10) ))) //Take longer to repair heavier damage
-		if(do_after(user, 30,src))
+		//if(!do_after(user, min(60, round( ((maxhealth/health)*10)+(malfunction*10) ))) //Take longer to repair heavier damage
+		if(!do_after(user, 30,src))
 			if (coil.use(1))
 				health = max_health
 				malfunction = 0

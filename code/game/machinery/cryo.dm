@@ -272,14 +272,25 @@
 		occupant.client.eye = occupant.client.mob
 		occupant.client.perspective = MOB_PERSPECTIVE
 	occupant.forceMove(get_step(loc, SOUTH))
-	if (occupant.bodytemperature < 261 && occupant.bodytemperature >= 70) 
-		occupant.bodytemperature = 261									  
+	if (occupant.bodytemperature < 261 && occupant.bodytemperature >= 70)
+		occupant.bodytemperature = 261
 	occupant = null
 	current_heat_capacity = initial(current_heat_capacity)
 	update_use_power(POWER_USE_IDLE)
 	update_icon()
 	SetName(initial(name))
 	return
+
+/obj/machinery/atmospherics/unary/cryo_cell/AltClick(mob/user)
+	if(CanDefaultInteract(user))
+		go_out()
+	else
+		..()
+
+/obj/machinery/atmospherics/unary/cryo_cell/CtrlClick(mob/user)
+	if(CanDefaultInteract(user))
+		on = !on
+		update_icon()
 
 /obj/machinery/atmospherics/unary/cryo_cell/proc/put_mob(mob/living/carbon/M as mob)
 	if (stat & (NOPOWER|BROKEN))
@@ -323,7 +334,7 @@
 		to_chat(user, "<span class='warning'>Unbuckle the subject before attempting to move them.</span>")
 		return
 	user.visible_message("<span class='notice'>\The [user] begins placing \the [target] into \the [src].</span>", "<span class='notice'>You start placing \the [target] into \the [src].</span>")
-	if(!do_after(user, 30, src))
+	if(do_after(user, 30, src))
 		return
 	put_mob(target)
 
@@ -383,3 +394,4 @@
 
 /datum/data/function/proc/display()
 	return
+

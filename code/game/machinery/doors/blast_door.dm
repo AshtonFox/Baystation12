@@ -143,7 +143,7 @@
 	if(isCrowbar(C) || (istype(C, /obj/item/weapon/material/twohanded/fireaxe) && C:wielded == 1))
 		if(((stat & NOPOWER) || (stat & BROKEN)) && !( operating ))
 			to_chat(user, "<span class='notice'>You begin prying at \the [src]...</span>")
-			if(do_after(user, 2 SECONDS, src))
+			if(!do_after(user, 2 SECONDS, src))
 				force_toggle()
 			else
 				to_chat(user, "<span class='warning'>You must remain still while working on \the [src].</span>")
@@ -160,7 +160,7 @@
 			to_chat(user, "<span class='warning'>You don't have enough sheets to repair this! You need at least [amt] sheets.</span>")
 			return
 		to_chat(user, "<span class='notice'>You begin repairing \the [src]...</span>")
-		if(do_after(user, 5 SECONDS, src))
+		if(!do_after(user, 5 SECONDS, src))
 			if(P.use(amt))
 				to_chat(user, "<span class='notice'>You have repaired \the [src].</span>")
 				repair()
@@ -208,6 +208,9 @@
 /obj/machinery/door/blast/CanPass(atom/movable/mover, turf/target, height=0, air_group=0)
 	if(air_group) return 1
 	return ..()
+
+/obj/machinery/door/blast/do_simple_ranged_interaction(var/mob/user)
+	return TRUE
 
 // Used with mass drivers to time the close.
 /obj/machinery/door/blast/proc/delayed_close()
@@ -267,8 +270,8 @@
 /obj/machinery/door/blast/regular/escape_pod
 	name = "Escape Pod release Door"
 
-/obj/machinery/door/blast/regular/escape_pod/Process()	
-	if(evacuation_controller.emergency_evacuation && evacuation_controller.state >= EVAC_LAUNCHING && src.icon_state == icon_state_closed)		
+/obj/machinery/door/blast/regular/escape_pod/Process()
+	if(evacuation_controller.emergency_evacuation && evacuation_controller.state >= EVAC_LAUNCHING && src.icon_state == icon_state_closed)
 		src.force_open()
 	. = ..()
 

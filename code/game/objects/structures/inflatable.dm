@@ -25,7 +25,13 @@
 	..(A, user)
 	if(!deploy_path)
 		return
-	if(!user.Adjacent(A))
+	user.visible_message(
+		SPAN_ITALIC("\The [user] starts inflating \an [src]."),
+		SPAN_ITALIC("You start inflating \the [src]."),
+		SPAN_ITALIC("You can hear rushing air."),
+		range = 5
+	)
+	if (do_after(user, 1 SECOND))
 		return
 	if (isturf(A))
 		var/turf/T = A

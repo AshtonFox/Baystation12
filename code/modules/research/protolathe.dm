@@ -43,7 +43,7 @@
 		update_icon()
 	else
 		if(busy)
-			visible_message("<span class='notice'>[icon2html(src, viewers(src))] [src] flashes: insufficient materials: [getLackingMaterials(D)].</span>")
+			visible_message("<span class='notice'>[icon2html(src, viewers(get_turf(src)))] [src] flashes: insufficient materials: [getLackingMaterials(D)].</span>")
 			busy = 0
 			update_icon()
 
@@ -126,7 +126,7 @@
 
 	busy = 1
 	use_power_oneoff(max(1000, (SHEET_MATERIAL_AMOUNT * amount / 10)))
-	if(do_after(user, 16,src))
+	if(!do_after(user, 16,src))
 		if(stack.use(amount))
 			to_chat(user, "<span class='notice'>You add [amount] sheet\s to \the [src].</span>")
 			materials[stack.material.name] += amount * SHEET_MATERIAL_AMOUNT

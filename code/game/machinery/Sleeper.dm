@@ -230,7 +230,7 @@
 	else
 		visible_message("\The [user] starts putting [M] into \the [src].")
 
-	if(do_after(user, 20, src))
+	if(!do_after(user, 20, src))
 		if(occupant)
 			to_chat(user, "<span class='warning'>\The [src] is already occupied.</span>")
 			return
@@ -250,6 +250,12 @@
 			continue
 		O.dropInto(loc)
 	toggle_filter()
+
+/obj/machinery/sleeper/AltClick(mob/user)
+	if(CanDefaultInteract(user))
+		go_out()
+	else
+		..()
 
 /obj/machinery/sleeper/proc/set_occupant(var/mob/living/carbon/occupant)
 	src.occupant = occupant

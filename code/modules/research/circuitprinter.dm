@@ -49,7 +49,7 @@ using metal and glass, it uses glass and reagents (usually sulphuric acid).
 		update_icon()
 	else
 		if(busy)
-			visible_message("<span class='notice'>[icon2html(src, viewers(src))] [src] flashes: insufficient materials: [getLackingMaterials(D)].</span>")
+			visible_message("<span class='notice'>[icon2html(src, viewers(get_turf(src)))] [src] flashes: insufficient materials: [getLackingMaterials(D)].</span>")
 			busy = 0
 			update_icon()
 
@@ -127,7 +127,7 @@ using metal and glass, it uses glass and reagents (usually sulphuric acid).
 
 	var/t = stack.material.name
 	if(t)
-		if(do_after(usr, 16, src))
+		if(!do_after(usr, 16, src))
 			if(stack.use(amount))
 				to_chat(user, "<span class='notice'>You add [amount] sheet\s to \the [src].</span>")
 				materials[t] += amount * SHEET_MATERIAL_AMOUNT

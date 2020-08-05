@@ -1,6 +1,6 @@
 /datum/map/torch
-	name = "Blue Jay"
-	full_name = "NTEV Blue Jay"
+	name = "\improper Blue Jay"
+	full_name = "\improper NTEV Blue Jay"
 	path = "torch"
 	flags = MAP_HAS_BRANCH | MAP_HAS_RANK
 	config_path = "config/torch_config.txt"
@@ -15,8 +15,8 @@
 	allowed_spawns = list("Cryogenic Storage", "Cyborg Storage")
 	default_spawn = "Cryogenic Storage"
 
-	station_name  = "NTEV Blue Jay"
-	station_short = "Blue Jay"
+	station_name  = "\improper NTEV Blue Jay"
+	station_short = "\improper Blue Jay"
 	dock_name     = "TBD"
 	boss_name     = "Central Command"
 	boss_short    = "Central"
