@@ -1,9 +1,11 @@
+//These are modified by Donnarex to avoid comprehensive map book-picking changes
+
 /obj/item/weapon/book/manual/solgov_law
-	name = "Sol Central Government Law"
-	desc = "A brief overview of SolGov Law."
+	name = "Space Law"
+	desc = "An overview of so-called \"Space Law\" applicible to NanoTrasen facilities."
 	icon_state = "bookSolGovLaw"
-	author = "The Sol Central Government"
-	title = "Sol Central Government Law"
+	author = "NanoTrasen"
+	title = "Space Law"
 
 /obj/item/weapon/book/manual/solgov_law/Initialize()
 	. = ..()
@@ -13,7 +15,7 @@
 		</head>
 
 		<body>
-		<iframe width='100%' height='97%' src="[config.wikiurl]Sol_Central_Government_Law&printable=yes&remove_links=1" frameborder="0" id="main_frame"></iframe>
+		<iframe width='100%' height='97%' src="[config.wikiurl]index.php?title=Корпоративные_законы&printable=yes&remove_links=1" frameborder="0" id="main_frame"></iframe>
 		</body>
 
 		</html>
@@ -21,7 +23,7 @@
 		"}
 
 
-/obj/item/weapon/book/manual/military_law
+/obj/item/weapon/book/manual/military_law //No need touching this
 	name = "The Sol Code of Military Justice"
 	desc = "A brief overview of military law."
 	icon_state = "bookSolGovLaw"
@@ -47,7 +49,7 @@
 	name = "Standard Operating Procedure"
 	desc = "SOP aboard the NTEV Blue Jay."
 	icon_state = "booksolregs"
-	author = "The Sol Central Government"
+	author = "NanoTrasen"
 	title = "Standard Operating Procedure"
 
 /obj/item/weapon/book/manual/sol_sop/Initialize()
@@ -58,7 +60,7 @@
 		</head>
 
 		<body>
-		<iframe width='100%' height='97%' src="[config.wikiurl]Standard_Operating_Procedure&printable=yes&remove_links=1" frameborder="0" id="main_frame"></iframe>
+		<iframe width='100%' height='97%' src="[config.wikiurl]index.php?title=Стандартные_протоколы&printable=yes&remove_links=1" frameborder="0" id="main_frame"></iframe>
 		</body>
 
 		</html>
