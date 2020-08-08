@@ -13,8 +13,8 @@ Synthetic
 
 /datum/job/ai
 	minimal_player_age = 7
-	total_positions = 0
-	spawn_positions = 0
+	//total_positions = 0 Donnarex remove
+	//spawn_positions = 0
 	allowed_ranks = list(
 		/datum/mil_rank/civ/synthetic
 	)
