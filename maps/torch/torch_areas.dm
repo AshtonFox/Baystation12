@@ -329,6 +329,7 @@
 
 /area/shuttle/escape_pod14/station
 	name = "Escape Pod Nine"
+	requires_power = TRUE //Basically makes it disabled
 	area_flags = AREA_FLAG_RAD_SHIELDED | AREA_FLAG_ION_SHIELDED | AREA_FLAG_IS_NOT_PERSISTENT
 
 /area/shuttle/escape_pod15/station
