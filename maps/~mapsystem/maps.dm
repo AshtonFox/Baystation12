@@ -88,6 +88,7 @@ var/const/MAP_HAS_RANK = 2		//Rank system, also togglable
 
 	var/lobby_icon
 	var/list/lobby_screens = list('icons/default_lobby.png')    // The list of lobby screen to pick() from. If left unset the first icon state is always selected.
+	var/lobby_transitions = FALSE          // If a number, transition between the lobby screens with this delay instead of picking just one.
 	var/music_track/lobby_track                     // The track that will play in the lobby screen.
 	var/list/lobby_tracks = list()                  // The list of lobby tracks to pick() from. If left unset will randomly select among all available /music_track subtypes.
 	var/welcome_sound = 'sound/AI/welcome.ogg'		// Sound played on roundstart

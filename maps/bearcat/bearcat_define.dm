@@ -17,6 +17,7 @@
 
 	evac_controller_type = /datum/evacuation_controller/lifepods
 	lobby_screens = list("bloodmoney","vapormoney")
+	lobby_transitions = 10 SECONDS
 	lobby_icon = 'maps/bearcat/lobby/bearcat_title.dmi'
 
 	allowed_spawns = list("Cryogenic Storage")

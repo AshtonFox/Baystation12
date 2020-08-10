@@ -50,6 +50,7 @@
 /obj/screen/new_player/title
 	name = "Title"
 	screen_loc = "WEST,SOUTH"
+	var/lobby_index = 1
 
 /obj/screen/new_player/title/Initialize()
 	icon = GLOB.using_map.lobby_icon
@@ -60,11 +61,31 @@
 			GLOB.using_map.lobby_screens -= lobby_screen
 
 	if(GLOB.using_map.lobby_screens.len)
-		icon_state = pick(GLOB.using_map.lobby_screens)
+		if(GLOB.using_map.lobby_transitions && isnum(GLOB.using_map.lobby_transitions))
+			icon_state = GLOB.using_map.lobby_screens[lobby_index]
+			if(Master.initializing)
+				spawn(GLOB.using_map.lobby_transitions)
+					Update()
+			else
+				addtimer(CALLBACK(src, .proc/Update), GLOB.using_map.lobby_transitions, TIMER_UNIQUE | TIMER_CLIENT_TIME | TIMER_OVERRIDE)
+		else
+			icon_state = pick(GLOB.using_map.lobby_screens)
 	else
-		icon_state = known_icon_states[1]
+		icon_state = LAZYACCESS(known_icon_states, 1)
 
 	. = ..()
+
+/obj/screen/new_player/title/proc/Update()
+	lobby_index += 1
+	if (lobby_index > GLOB.using_map.lobby_screens.len)
+		lobby_index = 1
+	animate(src, alpha = 0, time = 1 SECOND)
+	animate(alpha = 255, icon_state = GLOB.using_map.lobby_screens[lobby_index], time = 1 SECOND)
+	if(Master.initializing)
+		spawn(GLOB.using_map.lobby_transitions)
+			Update()
+	else
+		addtimer(CALLBACK(src, .proc/Update), GLOB.using_map.lobby_transitions, TIMER_UNIQUE | TIMER_CLIENT_TIME | TIMER_OVERRIDE)
 
 /obj/screen/new_player/selection/join_game
 	name = "Join Game"
@@ -104,10 +125,14 @@
 
 /obj/screen/new_player/selection/MouseEntered(location,control,params) //Yellow color for the font
 	color = "#6cb0e8"
+	var/matrix/M = matrix()
+	M.Scale(1.1, 1.1)
+	animate(src, transform = M, time = 1, easing = CUBIC_EASING)
 	return ..()
 
 /obj/screen/new_player/selection/MouseExited(location,control,params)
 	color = null
+	animate(src, transform = null, time = 1, easing = CUBIC_EASING)
 	return ..()
 
 
@@ -123,6 +148,7 @@
 
 /obj/screen/new_player/selection/join_game/Click()
 	var/mob/new_player/player = usr
+	sound_to(player, 'sound/effects/menu_click.ogg')
 	if(GAME_STATE <= RUNLEVEL_LOBBY)
 		if(player.ready)
 			player.ready = FALSE
@@ -138,20 +164,25 @@
 
 /obj/screen/new_player/selection/manifest/Click()
 	var/mob/new_player/player = usr
+	sound_to(player, 'sound/effects/menu_click.ogg')
 	player.ViewManifest()
 
 /obj/screen/new_player/selection/observe/Click()
 	var/mob/new_player/player = usr
+	sound_to(player, 'sound/effects/menu_click.ogg')
 	player.observe()
 
 /obj/screen/new_player/selection/settings/Click()
 	var/mob/new_player/player = usr
+	sound_to(player, 'sound/effects/menu_click.ogg')
 	player.setupcharacter()
 
 /obj/screen/new_player/selection/changelog/Click()
 	var/mob/new_player/player = usr
+	sound_to(player, 'sound/effects/menu_click.ogg')
 	player.client.changes()
 
 /obj/screen/new_player/selection/poll/Click()
 	var/mob/new_player/player = usr
+	sound_to(player, 'sound/effects/menu_click.ogg')
 	player.handle_player_polling()
