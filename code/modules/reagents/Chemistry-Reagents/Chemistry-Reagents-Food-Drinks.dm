@@ -42,6 +42,8 @@
 	affect_ingest(M, alien, removed)
 
 /datum/reagent/nutriment/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
+	if(alien == SPECIES_OLDUNATHI)
+		return
 	M.heal_organ_damage(0.5 * removed, 0) //what
 
 	adjust_nutrition(M, alien, removed)
@@ -54,6 +56,7 @@
 		if(IS_RESOMI) removed *= 0.65 // Resomi get a bit more nutrition from meat, a bit less from other stuff to compensate
 		if(IS_UNATHI) removed *= 0.1 // Unathi get most of their nutrition from meat.
 		if(IS_CARNIVORE) removed *= 0.1 // Technically a copy of IS_UNATHI, and likely spaghetti code, but whatever.
+		if(IS_OLDUNATHI) return //Literally nothing from nutriments
 	if(nutriment_factor)
 		M.adjust_nutrition(nutriment_factor * nut_removed) // For hunger and fatness
 	if(hydration_factor)
@@ -86,6 +89,7 @@
 		if(IS_RESOMI) removed *= 1.55
 		if(IS_UNATHI) removed *= 2.25
 		if(IS_CARNIVORE) removed *= 2.25
+		if(IS_OLDUNATHI) removed *= 3.5
 	M.adjust_nutrition(nutriment_factor * removed)
 
 /datum/reagent/nutriment/protein/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
@@ -418,7 +422,7 @@
 	M.adjustToxLoss(0.5 * removed)
 
 /datum/reagent/capsaicin/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
-	if(alien == IS_DIONA || alien == IS_UNATHI)
+	if(alien == IS_DIONA || alien == IS_UNATHI || alien == IS_OLDUNATHI)
 		return
 	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
@@ -676,7 +680,7 @@
 	glass_desc = "A glass of deadly juice."
 
 /datum/reagent/toxin/poisonberryjuice/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	if(alien == IS_UNATHI)
+	if(alien == IS_UNATHI || alien == IS_OLDUNATHI)
 		return //unathi are immune!
 	return ..()
 
@@ -1060,6 +1064,16 @@
 	glass_name = "Kira Special"
 	glass_desc = "Long live the guy who everyone had mistaken for a girl. Baka!"
 	glass_special = list(DRINK_FIZZ)
+
+/datum/reagent/drink/triplecitrus
+	name = "Triple Citrus"
+	description = "Triple the citrus, triple the fun."
+	taste_description = "unbearable sweetness"
+	color = "#ff7f07"
+	adj_temp = -5
+
+	glass_name = "Triple Citrus"
+	glass_desc = "Triple the citrus, triple the fun."
 
 /datum/reagent/drink/orange_soda
 	name = "Fizzy Orange"

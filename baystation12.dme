@@ -1157,6 +1157,7 @@
 #include "code\game\objects\structures\target_stake.dm"
 #include "code\game\objects\structures\transit_tubes.dm"
 #include "code\game\objects\structures\under_wardrobe.dm"
+#include "code\game\objects\structures\virologyprops.dm"
 #include "code\game\objects\structures\wall_frame.dm"
 #include "code\game\objects\structures\wallframe_spawner.dm"
 #include "code\game\objects\structures\watercloset.dm"
@@ -3322,6 +3323,7 @@
 #include "modular_mithra\code\modules\species\station\vasilissan.dm"
 #include "modular_mithra\code\modules\species\station\vulpkanin.dm"
 #include "modular_mithra\code\modules\sprite_accessories\_accessory_hair.dm"
+#include "modular_mithra\code\modules\sprite_accessories\accessory_humanathi.dm"
 #include "modular_mithra\code\modules\sprite_accessories\accessory_tajara.dm"
 #include "~code\global_init.dm"
 // END_INCLUDE

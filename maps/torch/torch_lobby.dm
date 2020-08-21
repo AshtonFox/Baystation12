@@ -1,5 +1,6 @@
 /datum/map/torch
 	lobby_screens = list("1","2","3","4","5","6","7")
+	lobby_transitions = 10 SECONDS
 	lobby_icon = 'icons/misc/title_bh.dmi'
 	lobby_tracks = list(
 		/music_track/chasing_time,
